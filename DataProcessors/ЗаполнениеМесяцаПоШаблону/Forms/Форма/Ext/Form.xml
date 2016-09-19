@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаполнитьСтатьи" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьСтатьи</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьСтатьиРасширеннаяПодсказка" id="61"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ВыбМесяц" id="1">
+			<DataPath>ВыбМесяц</DataPath>
+			<ContextMenu name="ВыбМесяцКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВыбМесяцРасширеннаяПодсказка" id="62"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="58">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="59">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<Table name="ТЗГод" id="3">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗГод</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗГодКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="ТЗГодКоманднаяПанель" id="5"/>
+							<ExtendedTooltip name="ТЗГодРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="ТЗГодСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>ТЗГод</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗГодСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ТЗГодСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗГодСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>ТЗГод</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗГодСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ТЗГодСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗГодУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>ТЗГод</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗГодУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ТЗГодУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗГодПериод" id="6">
+									<DataPath>ТЗГод.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗГодПериодКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ТЗГодПериодРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="ТЗГодСтатья" id="8">
+									<DataPath>ТЗГод.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗГодСтатьяКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ТЗГодСтатьяРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="ТЗГодСумма" id="10">
+									<DataPath>ТЗГод.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗГодСуммаКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ТЗГодСуммаРасширеннаяПодсказка" id="77"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТЗМесяц" id="13">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗМесяц</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗМесяцКонтекстноеМеню" id="14"/>
+							<AutoCommandBar name="ТЗМесяцКоманднаяПанель" id="15"/>
+							<ExtendedTooltip name="ТЗМесяцРасширеннаяПодсказка" id="78"/>
+							<SearchStringAddition name="ТЗМесяцСтрокаПоиска" id="79">
+								<AdditionSource>
+									<Item>ТЗМесяц</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗМесяцСтрокаПоискаКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="ТЗМесяцСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗМесяцСостояниеПросмотра" id="82">
+								<AdditionSource>
+									<Item>ТЗМесяц</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗМесяцСостояниеПросмотраКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="ТЗМесяцСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗМесяцУправлениеПоиском" id="85">
+								<AdditionSource>
+									<Item>ТЗМесяц</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗМесяцУправлениеПоискомКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="ТЗМесяцУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗМесяцПериод" id="16">
+									<DataPath>ТЗМесяц.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗМесяцПериодКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ТЗМесяцПериодРасширеннаяПодсказка" id="88"/>
+								</InputField>
+								<InputField name="ТЗМесяцСтатья" id="18">
+									<DataPath>ТЗМесяц.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗМесяцСтатьяКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ТЗМесяцСтатьяРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<InputField name="ТЗМесяцСумма" id="20">
+									<DataPath>ТЗМесяц.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗМесяцСуммаКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ТЗМесяцСуммаРасширеннаяПодсказка" id="90"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТЗНеделя" id="22">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗНеделя</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗНеделяКонтекстноеМеню" id="23"/>
+							<AutoCommandBar name="ТЗНеделяКоманднаяПанель" id="24"/>
+							<ExtendedTooltip name="ТЗНеделяРасширеннаяПодсказка" id="91"/>
+							<SearchStringAddition name="ТЗНеделяСтрокаПоиска" id="92">
+								<AdditionSource>
+									<Item>ТЗНеделя</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗНеделяСтрокаПоискаКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="ТЗНеделяСтрокаПоискаРасширеннаяПодсказка" id="94"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗНеделяСостояниеПросмотра" id="95">
+								<AdditionSource>
+									<Item>ТЗНеделя</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗНеделяСостояниеПросмотраКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="ТЗНеделяСостояниеПросмотраРасширеннаяПодсказка" id="97"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗНеделяУправлениеПоиском" id="98">
+								<AdditionSource>
+									<Item>ТЗНеделя</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗНеделяУправлениеПоискомКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="ТЗНеделяУправлениеПоискомРасширеннаяПодсказка" id="100"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗНеделяПериод" id="25">
+									<DataPath>ТЗНеделя.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗНеделяПериодКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ТЗНеделяПериодРасширеннаяПодсказка" id="101"/>
+								</InputField>
+								<InputField name="ТЗНеделяСтатья" id="27">
+									<DataPath>ТЗНеделя.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗНеделяСтатьяКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ТЗНеделяСтатьяРасширеннаяПодсказка" id="102"/>
+								</InputField>
+								<InputField name="ТЗНеделяСумма" id="29">
+									<DataPath>ТЗНеделя.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗНеделяСуммаКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ТЗНеделяСуммаРасширеннаяПодсказка" id="103"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="60">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<Table name="ТЗРабДень" id="40">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗРабДень</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗРабДеньКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="ТЗРабДеньКоманднаяПанель" id="42"/>
+							<ExtendedTooltip name="ТЗРабДеньРасширеннаяПодсказка" id="105"/>
+							<SearchStringAddition name="ТЗРабДеньСтрокаПоиска" id="106">
+								<AdditionSource>
+									<Item>ТЗРабДень</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗРабДеньСтрокаПоискаКонтекстноеМеню" id="107"/>
+								<ExtendedTooltip name="ТЗРабДеньСтрокаПоискаРасширеннаяПодсказка" id="108"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗРабДеньСостояниеПросмотра" id="109">
+								<AdditionSource>
+									<Item>ТЗРабДень</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗРабДеньСостояниеПросмотраКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="ТЗРабДеньСостояниеПросмотраРасширеннаяПодсказка" id="111"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗРабДеньУправлениеПоиском" id="112">
+								<AdditionSource>
+									<Item>ТЗРабДень</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗРабДеньУправлениеПоискомКонтекстноеМеню" id="113"/>
+								<ExtendedTooltip name="ТЗРабДеньУправлениеПоискомРасширеннаяПодсказка" id="114"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗРабДеньПериод" id="43">
+									<DataPath>ТЗРабДень.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗРабДеньПериодКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ТЗРабДеньПериодРасширеннаяПодсказка" id="115"/>
+								</InputField>
+								<InputField name="ТЗРабДеньСтатья" id="45">
+									<DataPath>ТЗРабДень.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗРабДеньСтатьяКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ТЗРабДеньСтатьяРасширеннаяПодсказка" id="116"/>
+								</InputField>
+								<InputField name="ТЗРабДеньСумма" id="47">
+									<DataPath>ТЗРабДень.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗРабДеньСуммаКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ТЗРабДеньСуммаРасширеннаяПодсказка" id="117"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТЗДень" id="49">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗДень</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗДеньКонтекстноеМеню" id="50"/>
+							<AutoCommandBar name="ТЗДеньКоманднаяПанель" id="51"/>
+							<ExtendedTooltip name="ТЗДеньРасширеннаяПодсказка" id="118"/>
+							<SearchStringAddition name="ТЗДеньСтрокаПоиска" id="119">
+								<AdditionSource>
+									<Item>ТЗДень</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗДеньСтрокаПоискаКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="ТЗДеньСтрокаПоискаРасширеннаяПодсказка" id="121"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗДеньСостояниеПросмотра" id="122">
+								<AdditionSource>
+									<Item>ТЗДень</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗДеньСостояниеПросмотраКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="ТЗДеньСостояниеПросмотраРасширеннаяПодсказка" id="124"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗДеньУправлениеПоиском" id="125">
+								<AdditionSource>
+									<Item>ТЗДень</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗДеньУправлениеПоискомКонтекстноеМеню" id="126"/>
+								<ExtendedTooltip name="ТЗДеньУправлениеПоискомРасширеннаяПодсказка" id="127"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗДеньПериод" id="52">
+									<DataPath>ТЗДень.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗДеньПериодКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ТЗДеньПериодРасширеннаяПодсказка" id="128"/>
+								</InputField>
+								<InputField name="ТЗДеньСтатья" id="54">
+									<DataPath>ТЗДень.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗДеньСтатьяКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ТЗДеньСтатьяРасширеннаяПодсказка" id="129"/>
+								</InputField>
+								<InputField name="ТЗДеньСумма" id="56">
+									<DataPath>ТЗДень.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗДеньСуммаКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ТЗДеньСуммаРасширеннаяПодсказка" id="130"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТЗОбщая" id="31">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗОбщая</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗОбщаяКонтекстноеМеню" id="32"/>
+							<AutoCommandBar name="ТЗОбщаяКоманднаяПанель" id="33"/>
+							<ExtendedTooltip name="ТЗОбщаяРасширеннаяПодсказка" id="131"/>
+							<SearchStringAddition name="ТЗОбщаяСтрокаПоиска" id="132">
+								<AdditionSource>
+									<Item>ТЗОбщая</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗОбщаяСтрокаПоискаКонтекстноеМеню" id="133"/>
+								<ExtendedTooltip name="ТЗОбщаяСтрокаПоискаРасширеннаяПодсказка" id="134"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗОбщаяСостояниеПросмотра" id="135">
+								<AdditionSource>
+									<Item>ТЗОбщая</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗОбщаяСостояниеПросмотраКонтекстноеМеню" id="136"/>
+								<ExtendedTooltip name="ТЗОбщаяСостояниеПросмотраРасширеннаяПодсказка" id="137"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗОбщаяУправлениеПоиском" id="138">
+								<AdditionSource>
+									<Item>ТЗОбщая</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗОбщаяУправлениеПоискомКонтекстноеМеню" id="139"/>
+								<ExtendedTooltip name="ТЗОбщаяУправлениеПоискомРасширеннаяПодсказка" id="140"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗОбщаяПериод" id="34">
+									<DataPath>ТЗОбщая.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗОбщаяПериодКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ТЗОбщаяПериодРасширеннаяПодсказка" id="141"/>
+								</InputField>
+								<InputField name="ТЗОбщаяСтатья" id="36">
+									<DataPath>ТЗОбщая.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗОбщаяСтатьяКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ТЗОбщаяСтатьяРасширеннаяПодсказка" id="142"/>
+								</InputField>
+								<InputField name="ТЗОбщаяСумма" id="38">
+									<DataPath>ТЗОбщая.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗОбщаяСуммаКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ТЗОбщаяСуммаРасширеннаяПодсказка" id="143"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗаполнениеМесяцаПоШаблону</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВыбМесяц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выб месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>ВыбМесяц</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТЗГод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статья" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗМесяц" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статья" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗНеделя" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неделя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статья" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗДень" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статья" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗОбщая" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статья" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗРабДень" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раб. день</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статья" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьСтатьи" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить статьи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить статьи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСтатьи</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="db3e50c0-0554-4166-9cc1-94b29adadb53">
+		<Properties>
+			<Name>Долги</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долги</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ИконкаВзаиморасчеты48х48</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">e7d75ab2-6479-4241-a923-fcc521aba249</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">8ab7b3d1-e4df-447b-9b87-49bb6dbc86fb</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Кошельки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ДенежныеСредства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоКошелькам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">5b738e6d-24ac-4be6-abee-d9956abf7634</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиДоходовРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">0ea1cfbe-ac77-42e0-8357-a433619f650f</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a9f4ebdf-e61a-43df-812f-cec583a46cca</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">662022f4-860d-4456-8429-3c8379818166</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыДолга</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Проекты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b1211404-2c68-413d-93ee-9686237e744e</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

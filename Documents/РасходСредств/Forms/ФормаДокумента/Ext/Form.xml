@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="Перейти" id="25">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Перейти</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Перейти</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ПерейтиРасширеннаяПодсказка" id="124"/>
+				<ChildItems>
+					<Button name="ФормаРегистрНакопленияБДРОткрытьПоРегистратору" id="26">
+						<Type>CommandBarButton</Type>
+						<CommandName>AccumulationRegister.БДР.StandardCommand.OpenByRecorder</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаРегистрНакопленияБДРОткрытьПоРегистраторуРасширеннаяПодсказка" id="125"/>
+					</Button>
+					<Button name="ФормаРегистрНакопленияДенежныеСредстваОткрытьПоРегистратору" id="27">
+						<Type>CommandBarButton</Type>
+						<CommandName>AccumulationRegister.ДенежныеСредства.StandardCommand.OpenByRecorder</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаРегистрНакопленияДенежныеСредстваОткрытьПоРегистраторуРасширеннаяПодсказка" id="126"/>
+					</Button>
+					<Button name="ФормаРегистрНакопленияКредитыОткрытьПоРегистратору" id="28">
+						<Type>CommandBarButton</Type>
+						<CommandName>1:26c4125e-81b5-4d1b-ad15-03a22345719d</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаРегистрНакопленияКредитыОткрытьПоРегистраторуРасширеннаяПодсказка" id="127"/>
+					</Button>
+					<Button name="ФормаРегистрНакопленияОборотыПоПроектамОткрытьПоРегистратору" id="49">
+						<Type>CommandBarButton</Type>
+						<CommandName>1:b1211404-2c68-413d-93ee-9686237e744e</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаРегистрНакопленияОборотыПоПроектамОткрытьПоРегистраторуРасширеннаяПодсказка" id="128"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаГлавная" id="95">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа главная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа главная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГлавнаяРасширеннаяПодсказка" id="129"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="94">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="130"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="22">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="131"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="132"/>
+								</InputField>
+								<InputField name="Дата" id="3">
+									<DataPath>Объект.Date</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<EditMode>EnterOnInput</EditMode>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="133"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="74">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="134"/>
+							<ChildItems>
+								<UsualGroup name="Группа8" id="79">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="135"/>
+									<ChildItems>
+										<InputField name="Сумма" id="57">
+											<DataPath>Объект.Сумма</DataPath>
+											<ContextMenu name="СуммаКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="136"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа6" id="77">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="137"/>
+									<ChildItems>
+										<UsualGroup name="Группа9" id="80">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="138"/>
+											<ChildItems>
+												<InputField name="СтатьяДР" id="63">
+													<DataPath>Объект.СтатьяДР</DataPath>
+													<Width>40</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="СтатьяДРКонтекстноеМеню" id="64"/>
+													<ExtendedTooltip name="СтатьяДРРасширеннаяПодсказка" id="139"/>
+												</InputField>
+												<InputField name="Кошелек" id="5">
+													<DataPath>Объект.Кошелек</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>40</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="КошелекКонтекстноеМеню" id="6"/>
+													<ExtendedTooltip name="КошелекРасширеннаяПодсказка" id="140"/>
+													<Events>
+														<Event name="OnChange">КошелекПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="Комментарий" id="23">
+											<DataPath>Объект.Комментарий</DataPath>
+											<Width>40</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="КомментарийКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="141"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа3" id="40">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="142"/>
+							<ChildItems>
+								<InputField name="Валюта" id="41">
+									<DataPath>Объект.Валюта</DataPath>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ВалютаКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="143"/>
+									<Events>
+										<Event name="OnChange">ВалютаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Курс" id="43">
+									<DataPath>Объект.Курс</DataPath>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КурсКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="144"/>
+								</InputField>
+								<InputField name="Кратность" id="45">
+									<DataPath>Объект.Кратность</DataPath>
+									<Width>5</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КратностьКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="КратностьРасширеннаяПодсказка" id="145"/>
+								</InputField>
+								<CheckBoxField name="флагПартионногоУчетаВалюты" id="81">
+									<DataPath>1/0:78e2969e-4bf7-46a1-b33e-4569a781f996</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="флагПартионногоУчетаВалютыКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="флагПартионногоУчетаВалютыРасширеннаяПодсказка" id="146"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="78">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="147"/>
+							<ChildItems>
+								<InputField name="Проект" id="54">
+									<DataPath>Объект.Проект</DataPath>
+									<Width>40</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ПроектКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="148"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа4" id="70">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<CheckBoxField name="СуммыВТабЧасти" id="61">
+									<DataPath>Объект.СуммыВТабЧасти</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать таблицу</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СуммыВТабЧастиКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="СуммыВТабЧастиРасширеннаяПодсказка" id="150"/>
+									<Events>
+										<Event name="OnChange">СуммыВТабЧастиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ЭтоПрогноз" id="52">
+									<DataPath>Объект.ЭтоПрогноз</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Это прогноз</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЭтоПрогнозКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ЭтоПрогнозРасширеннаяПодсказка" id="151"/>
+								</CheckBoxField>
+								<CheckBoxField name="НеПроводитьОвер" id="75">
+									<DataPath>Объект.НеПроводитьОвер</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеПроводитьОверКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="НеПроводитьОверРасширеннаяПодсказка" id="152"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа10" id="83">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="153"/>
+							<ChildItems>
+								<CheckBoxField name="ДетализацияПоНоменклатуре" id="31">
+									<DataPath>Объект.ДетализацияПоНоменклатуре</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДетализацияПоНоменклатуреКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ДетализацияПоНоменклатуреРасширеннаяПодсказка" id="154"/>
+									<Events>
+										<Event name="OnChange">ДетализацияПоНоменклатуреПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Контрагент" id="34">
+									<DataPath>Объект.Контрагент</DataPath>
+									<Width>29</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КонтрагентКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="155"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="156"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКалендарь" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Календарь</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа календарь</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКалендарьРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<UsualGroup name="Группа11" id="84">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="158"/>
+									<ChildItems>
+										<Button name="ВыбратьДату1" id="85">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату1РасширеннаяПодсказка" id="159"/>
+										</Button>
+										<Button name="ВыбратьДату2" id="86">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>2</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату2РасширеннаяПодсказка" id="160"/>
+										</Button>
+										<Button name="ВыбратьДату3" id="87">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>3</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату3РасширеннаяПодсказка" id="161"/>
+										</Button>
+										<Button name="ВыбратьДату4" id="88">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>4</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату4РасширеннаяПодсказка" id="162"/>
+										</Button>
+										<Button name="ВыбратьДату5" id="89">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>5</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату5РасширеннаяПодсказка" id="163"/>
+										</Button>
+										<Button name="ВыбратьДату6" id="90">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>6</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату6РасширеннаяПодсказка" id="164"/>
+										</Button>
+										<Button name="ВыбратьДату7" id="91">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>7</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату7РасширеннаяПодсказка" id="165"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа12" id="100">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="166"/>
+									<ChildItems>
+										<Button name="ВыбратьДату8" id="92">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>8</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату8РасширеннаяПодсказка" id="167"/>
+										</Button>
+										<Button name="ВыбратьДату9" id="93">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>9</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату9РасширеннаяПодсказка" id="168"/>
+										</Button>
+										<Button name="ВыбратьДату10" id="97">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>10</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату10РасширеннаяПодсказка" id="169"/>
+										</Button>
+										<Button name="ВыбратьДату11" id="98">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>11</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату11РасширеннаяПодсказка" id="170"/>
+										</Button>
+										<Button name="ВыбратьДату12" id="99">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>12</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату12РасширеннаяПодсказка" id="171"/>
+										</Button>
+										<Button name="ВыбратьДату13" id="101">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>13</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату13РасширеннаяПодсказка" id="172"/>
+										</Button>
+										<Button name="ВыбратьДату14" id="102">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>14</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату14РасширеннаяПодсказка" id="173"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа13" id="103">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="174"/>
+									<ChildItems>
+										<Button name="ВыбратьДату15" id="104">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>15</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату15РасширеннаяПодсказка" id="175"/>
+										</Button>
+										<Button name="ВыбратьДату16" id="105">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>16</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату16РасширеннаяПодсказка" id="176"/>
+										</Button>
+										<Button name="ВыбратьДату17" id="106">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>17</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату17РасширеннаяПодсказка" id="177"/>
+										</Button>
+										<Button name="ВыбратьДату18" id="107">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>18</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату18РасширеннаяПодсказка" id="178"/>
+										</Button>
+										<Button name="ВыбратьДату19" id="108">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>19</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату19РасширеннаяПодсказка" id="179"/>
+										</Button>
+										<Button name="ВыбратьДату20" id="109">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>20</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату20РасширеннаяПодсказка" id="180"/>
+										</Button>
+										<Button name="ВыбратьДату21" id="110">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>21</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату21РасширеннаяПодсказка" id="181"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа14" id="111">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="182"/>
+									<ChildItems>
+										<Button name="ВыбратьДату22" id="112">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>22</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату22РасширеннаяПодсказка" id="183"/>
+										</Button>
+										<Button name="ВыбратьДату23" id="113">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>23</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату23РасширеннаяПодсказка" id="184"/>
+										</Button>
+										<Button name="ВыбратьДату24" id="114">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>24</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату24РасширеннаяПодсказка" id="185"/>
+										</Button>
+										<Button name="ВыбратьДату25" id="115">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>25</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату25РасширеннаяПодсказка" id="186"/>
+										</Button>
+										<Button name="ВыбратьДату26" id="116">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>26</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату26РасширеннаяПодсказка" id="187"/>
+										</Button>
+										<Button name="ВыбратьДату27" id="117">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>27</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату27РасширеннаяПодсказка" id="188"/>
+										</Button>
+										<Button name="ВыбратьДату28" id="118">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>28</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату28РасширеннаяПодсказка" id="189"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа15" id="119">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="190"/>
+									<ChildItems>
+										<Button name="ВыбратьДату29" id="120">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>29</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату29РасширеннаяПодсказка" id="191"/>
+										</Button>
+										<Button name="ВыбратьДату30" id="121">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>30</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату30РасширеннаяПодсказка" id="192"/>
+										</Button>
+										<Button name="ВыбратьДату31" id="122">
+											<Type>UsualButton</Type>
+											<Width>3</Width>
+											<CommandName>Form.Command.ВыбратьДату</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>31</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьДату31РасширеннаяПодсказка" id="193"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаТабЧасть" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таб часть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаТабЧастьРасширеннаяПодсказка" id="194"/>
+			<ChildItems>
+				<Page name="СуммаТЧ" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма ТЧ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма ТЧ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СуммаТЧРасширеннаяПодсказка" id="195"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="33">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="196"/>
+						</UsualGroup>
+						<Table name="ДоходыРасходы" id="7">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДоходыРасходы</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДоходыРасходыКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ДоходыРасходыКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="ДоходыРасходыРасширеннаяПодсказка" id="197"/>
+							<SearchStringAddition name="ДоходыРасходыСтрокаПоиска" id="198">
+								<AdditionSource>
+									<Item>ДоходыРасходы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоходыРасходыСтрокаПоискаКонтекстноеМеню" id="199"/>
+								<ExtendedTooltip name="ДоходыРасходыСтрокаПоискаРасширеннаяПодсказка" id="200"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоходыРасходыСостояниеПросмотра" id="201">
+								<AdditionSource>
+									<Item>ДоходыРасходы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоходыРасходыСостояниеПросмотраКонтекстноеМеню" id="202"/>
+								<ExtendedTooltip name="ДоходыРасходыСостояниеПросмотраРасширеннаяПодсказка" id="203"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоходыРасходыУправлениеПоиском" id="204">
+								<AdditionSource>
+									<Item>ДоходыРасходы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоходыРасходыУправлениеПоискомКонтекстноеМеню" id="205"/>
+								<ExtendedTooltip name="ДоходыРасходыУправлениеПоискомРасширеннаяПодсказка" id="206"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДоходыРасходыНомерСтроки" id="10">
+									<DataPath>Объект.ДоходыРасходы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоходыРасходыНомерСтрокиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ДоходыРасходыНомерСтрокиРасширеннаяПодсказка" id="207"/>
+								</LabelField>
+								<InputField name="ДоходыРасходыСтатьяДР" id="12">
+									<DataPath>Объект.ДоходыРасходы.СтатьяДР</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоходыРасходыСтатьяДРКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ДоходыРасходыСтатьяДРРасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="ДоходыРасходыСумма" id="14">
+									<DataPath>Объект.ДоходыРасходы.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ДоходыРасходы.TotalСумма</FooterDataPath>
+									<ContextMenu name="ДоходыРасходыСуммаКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ДоходыРасходыСуммаРасширеннаяПодсказка" id="209"/>
+								</InputField>
+								<InputField name="ДоходыРасходыДопСумма" id="68">
+									<DataPath>Объект.ДоходыРасходы.ДопСумма</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доп. расходы</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ДоходыРасходы.TotalДопСумма</FooterDataPath>
+									<Width>6</Width>
+									<ContextMenu name="ДоходыРасходыДопСуммаКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДоходыРасходыДопСуммаРасширеннаяПодсказка" id="210"/>
+								</InputField>
+								<InputField name="ДоходыРасходыСодержаниеОперации" id="16">
+									<DataPath>Объект.ДоходыРасходы.СодержаниеОперации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоходыРасходыСодержаниеОперацииКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ДоходыРасходыСодержаниеОперацииРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<InputField name="ДоходыРасходыНоменклатура" id="36">
+									<DataPath>Объект.ДоходыРасходы.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоходыРасходыНоменклатураКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ДоходыРасходыНоменклатураРасширеннаяПодсказка" id="212"/>
+								</InputField>
+								<InputField name="ДоходыРасходыКоличество" id="38">
+									<DataPath>Объект.ДоходыРасходы.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоходыРасходыКоличествоКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ДоходыРасходыКоличествоРасширеннаяПодсказка" id="213"/>
+								</InputField>
+								<InputField name="ДоходыРасходыПроект" id="50">
+									<DataPath>Объект.ДоходыРасходы.Проект</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоходыРасходыПроектКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ДоходыРасходыПроектРасширеннаяПодсказка" id="214"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РасходСредств</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РаспределитьДопРасходы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить доп расходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаспределитьДопРасходы</Action>
+		</Command>
+		<Command name="ВыбратьДату" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать дату</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать дату</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьДату</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="СтатьяДР">
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.БДР.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>AccumulationRegister.ДенежныеСредства.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>1:26c4125e-81b5-4d1b-ad15-03a22345719d</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>1:2d627dcc-161e-4773-a3b3-b78b6756b625</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

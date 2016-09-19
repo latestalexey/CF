@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяДоходовРасходов</dataPath>
+			<field>СтатьяДоходовРасходов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДДС</dataPath>
+			<field>ПериодДДС</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<presentationExpression>Формат(ПериодДДС,"ДФ=MMMM")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>План</dataPath>
+			<field>План</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяДР</dataPath>
+			<field>СтатьяДР</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>НомерДляСортировки</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Факт</dataPath>
+			<field>Факт</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДляСортировки</dataPath>
+			<field>НомерДляСортировки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Спр.Ссылка КАК СтатьяДР,
+	ВЫБОР
+		КОГДА Спр.Ссылка В ИЕРАРХИИ
+				(ВЫБРАТЬ
+					СтатьиДоходовРасходов.Ссылка КАК Ссылка
+				ИЗ
+					Справочник.СтатьиДоходовРасходов КАК СтатьиДоходовРасходов
+				ГДЕ
+					СтатьиДоходовРасходов.ЗнакДвижения = 1)
+			ТОГДА 1
+		ИНАЧЕ -1
+	КОНЕЦ КАК Знак
+ПОМЕСТИТЬ ВТЗнакДвижения
+ИЗ
+	Справочник.СтатьиДоходовРасходов КАК Спр
+
+ИНДЕКСИРОВАТЬ ПО
+	СтатьяДР
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТЗнакДвижения.СтатьяДР КАК СтатьяДР,
+	НАЧАЛОПЕРИОДА(БДР.Период, МЕСЯЦ) КАК Период,
+	ВТЗнакДвижения.Знак * БДР.СуммаПлан КАК План,
+	0 КАК Факт
+ПОМЕСТИТЬ БДРОборотыПланФактВрем
+ИЗ
+	ВТЗнакДвижения КАК ВТЗнакДвижения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.БДР КАК БДР
+		ПО (БДР.СтатьяДоходовРасходов = ВТЗнакДвижения.СтатьяДР)
+			И (БДР.Регистратор = &amp;Бюджет)
+ГДЕ
+	БДР.Период ЕСТЬ НЕ NULL 
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БДРОборотыФакт.СтатьяДоходовРасходов,
+	БДРОборотыФакт.Период,
+	0,
+	ВТЗнакДвижения.Знак * БДРОборотыФакт.СуммаФактОборот
+ИЗ
+	РегистрНакопления.БДР.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Месяц, ) КАК БДРОборотыФакт
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТЗнакДвижения КАК ВТЗнакДвижения
+		ПО БДРОборотыФакт.СтатьяДоходовРасходов = ВТЗнакДвижения.СтатьяДР
+
+ИНДЕКСИРОВАТЬ ПО
+	СтатьяДР,
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА &amp;РасходыСберОтдельно = ЛОЖЬ
+			ТОГДА ВЫБОР
+					КОГДА Спр.СтатьяРодитель = ЗНАЧЕНИЕ(Справочник.СтатьиДоходовРасходов.ПустаяСсылка)
+						ТОГДА Спр.Ссылка
+					ИНАЧЕ Спр.СтатьяРодитель
+				КОНЕЦ
+		ИНАЧЕ Спр.Ссылка
+	КОНЕЦ КАК СтатьяДР,
+	БДРОборотыПланФактВрем.Период КАК Период,
+	СУММА(БДРОборотыПланФактВрем.План) КАК План,
+	СУММА(БДРОборотыПланФактВрем.Факт) КАК Факт
+ПОМЕСТИТЬ БДРОборотыПланФакт
+ИЗ
+	Справочник.СтатьиДоходовРасходов КАК Спр
+		ЛЕВОЕ СОЕДИНЕНИЕ БДРОборотыПланФактВрем КАК БДРОборотыПланФактВрем
+		ПО (БДРОборотыПланФактВрем.СтатьяДР = Спр.Ссылка)
+ГДЕ
+	БДРОборотыПланФактВрем.Период ЕСТЬ НЕ NULL 
+
+СГРУППИРОВАТЬ ПО
+	ВЫБОР
+		КОГДА &amp;РасходыСберОтдельно = ЛОЖЬ
+			ТОГДА ВЫБОР
+					КОГДА Спр.СтатьяРодитель = ЗНАЧЕНИЕ(Справочник.СтатьиДоходовРасходов.ПустаяСсылка)
+						ТОГДА Спр.Ссылка
+					ИНАЧЕ Спр.СтатьяРодитель
+				КОНЕЦ
+		ИНАЧЕ Спр.Ссылка
+	КОНЕЦ,
+	БДРОборотыПланФактВрем.Период
+
+ИНДЕКСИРОВАТЬ ПО
+	СтатьяДР,
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	БДРОборотыПланФакт.Период КАК Период,
+	СУММА(БДРОборотыПланФакт.План) КАК План,
+	СУММА(БДРОборотыПланФакт.Факт) КАК Факт
+ПОМЕСТИТЬ ОборотыПоПериодам
+ИЗ
+	БДРОборотыПланФакт КАК БДРОборотыПланФакт
+
+СГРУППИРОВАТЬ ПО
+	БДРОборотыПланФакт.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ДС.Дата, ГОД) КАК Период,
+	ДС.НачальныйОстаток КАК НачОст,
+	ДС.НачальныйОстаток + т.План КАК КонОст,
+	ДС.НачальныйОстаток КАК НачОстФакт,
+	ДС.НачальныйОстаток + т.Факт КАК КонОстФакт
+ПОМЕСТИТЬ Остатки1
+ИЗ
+	Документ.БюджетГод КАК ДС
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 1)
+ГДЕ
+	ДС.Ссылка = &amp;Бюджет
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(Остатки1.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(Остатки1.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(Остатки1.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(Остатки1.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(Остатки1.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ Остатки2
+ИЗ
+	Остатки1 КАК Остатки1
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 2)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(Остатки2.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(Остатки2.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(Остатки2.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(Остатки2.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(Остатки2.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ Остатки3
+ИЗ
+	Остатки2 КАК Остатки2
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 3)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(Остатки3.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(Остатки3.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(Остатки3.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(Остатки3.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(Остатки3.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ Остатки4
+ИЗ
+	Остатки3 КАК Остатки3
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 4)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(Остатки4.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(Остатки4.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(Остатки4.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(Остатки4.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(Остатки4.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ Остатки5
+ИЗ
+	Остатки4 КАК Остатки4
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 5)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(Остатки5.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(Остатки5.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(Остатки5.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(Остатки5.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(Остатки5.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ Остатки6
+ИЗ
+	Остатки5 КАК Остатки5
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 6)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(остатки6.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(остатки6.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(остатки6.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(остатки6.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(остатки6.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ остатки7
+ИЗ
+	Остатки6 КАК остатки6
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 7)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(остатки7.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(остатки7.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(остатки7.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(остатки7.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(остатки7.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ остатки8
+ИЗ
+	остатки7 КАК остатки7
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 8)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(остатки8.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(остатки8.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(остатки8.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(остатки8.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(остатки8.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ остатки9
+ИЗ
+	остатки8 КАК остатки8
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 9)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(остатки9.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(остатки9.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(остатки9.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(остатки9.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(остатки9.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ остатки10
+ИЗ
+	остатки9 КАК остатки9
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 10)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(Остатки10.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(Остатки10.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(Остатки10.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(Остатки10.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(Остатки10.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ остатки11
+ИЗ
+	остатки10 КАК Остатки10
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 11)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(Остатки11.Период, МЕСЯЦ, 1) КАК Период,
+	ЕСТЬNULL(Остатки11.КонОст, 0) КАК НачОст,
+	ЕСТЬNULL(Остатки11.КонОст, 0) + ЕСТЬNULL(т.План, 0) КАК КонОст,
+	ЕСТЬNULL(Остатки11.КонОстФакт, 0) КАК НачОстФакт,
+	ЕСТЬNULL(Остатки11.КонОстФакт, 0) + ЕСТЬNULL(т.Факт, 0) КАК КонОстФакт
+ПОМЕСТИТЬ Остатки12
+ИЗ
+	остатки11 КАК Остатки11
+		ЛЕВОЕ СОЕДИНЕНИЕ ОборотыПоПериодам КАК т
+		ПО (МЕСЯЦ(т.Период) = 12)
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОстаткиЗаГод.Период КАК Период,
+	ОстаткиЗаГод.НачОст,
+	ОстаткиЗаГод.коност,
+	ОстаткиЗаГод.НачОстФакт,
+	ОстаткиЗаГод.КонОстФакт
+ПОМЕСТИТЬ ТаблицаОстатков
+ИЗ
+	(ВЫБРАТЬ
+		остатки1.Период КАК Период,
+		остатки1.НачОстФакт КАК НачОстФакт,
+		остатки1.КонОстФакт КАК КонОстФакт,
+		остатки1.НачОст КАК НачОст,
+		остатки1.КонОст КАК коност
+	ИЗ
+		Остатки1 КАК остатки1
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки2.Период,
+		остатки2.НачОстФакт,
+		остатки2.КонОстФакт,
+		остатки2.НачОст,
+		остатки2.КонОст
+	ИЗ
+		Остатки2 КАК остатки2
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки3.Период,
+		остатки3.НачОстФакт,
+		остатки3.КонОстФакт,
+		остатки3.НачОст,
+		остатки3.КонОст
+	ИЗ
+		Остатки3 КАК остатки3
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки4.Период,
+		остатки4.НачОстФакт,
+		остатки4.КонОстФакт,
+		остатки4.НачОст,
+		остатки4.КонОст
+	ИЗ
+		Остатки4 КАК остатки4
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки5.Период,
+		остатки5.НачОстФакт,
+		остатки5.КонОстФакт,
+		остатки5.НачОст,
+		остатки5.КонОст
+	ИЗ
+		Остатки5 КАК остатки5
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки6.Период,
+		остатки6.НачОстФакт,
+		остатки6.КонОстФакт,
+		остатки6.НачОст,
+		остатки6.КонОст
+	ИЗ
+		Остатки6 КАК остатки6
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки7.Период,
+		остатки7.НачОстФакт,
+		остатки7.КонОстФакт,
+		остатки7.НачОст,
+		остатки7.КонОст
+	ИЗ
+		остатки7 КАК остатки7
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки8.Период,
+		остатки8.НачОстФакт,
+		остатки8.КонОстФакт,
+		остатки8.НачОст,
+		остатки8.КонОст
+	ИЗ
+		остатки8 КАК остатки8
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки9.Период,
+		остатки9.НачОстФакт,
+		остатки9.КонОстФакт,
+		остатки9.НачОст,
+		остатки9.КонОст
+	ИЗ
+		остатки9 КАК остатки9
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки10.Период,
+		остатки10.НачОстФакт,
+		остатки10.КонОстФакт,
+		остатки10.НачОст,
+		остатки10.КонОст
+	ИЗ
+		остатки10 КАК остатки10
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		остатки11.Период,
+		остатки11.НачОстФакт,
+		остатки11.КонОстФакт,
+		остатки11.НачОст,
+		остатки11.КонОст
+	ИЗ
+		остатки11 КАК остатки11
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Остатки12.Период,
+		Остатки12.НачОстФакт,
+		Остатки12.КонОстФакт,
+		Остатки12.НачОст,
+		Остатки12.КонОст
+	ИЗ
+		Остатки12 КАК Остатки12) КАК ОстаткиЗаГод
+
+ИНДЕКСИРОВАТЬ ПО
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаОстатков.НачОст КАК План,
+	ТаблицаОстатков.НачОстФакт КАК Факт,
+	"Начальный остаток" КАК СтатьяДР,
+	ТаблицаОстатков.Период КАК ПериодДДС,
+	1 КАК НомерДляСортировки
+ИЗ
+	ТаблицаОстатков КАК ТаблицаОстатков
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	остатки1.НачОст,
+	остатки1.НачОстФакт,
+	"Начальный остаток",
+	ДОБАВИТЬКДАТЕ(&amp;НачалоПериода, МЕСЯЦ, 12),
+	1
+ИЗ
+	Остатки1 КАК остатки1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БДРОБоротыПланФакт.План,
+	БДРОБоротыПланФакт.Факт,
+	БДРОБоротыПланФакт.СтатьяДР,
+	БДРОБоротыПланФакт.Период,
+	2
+ИЗ
+	БДРОборотыПланФакт КАК БДРОБоротыПланФакт
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СУММА(БДРОБоротыПланФакт.План),
+	СУММА(БДРОБоротыПланФакт.Факт),
+	БДРОБоротыПланФакт.СтатьяДР,
+	ДОБАВИТЬКДАТЕ(&amp;НачалоПериода, МЕСЯЦ, 12),
+	2
+ИЗ
+	БДРОборотыПланФакт КАК БДРОБоротыПланФакт
+
+СГРУППИРОВАТЬ ПО
+	БДРОБоротыПланФакт.СтатьяДР
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТаблицаОстатков.коност,
+	ТаблицаОстатков.КонОстФакт,
+	"Конечный остаток",
+	ТаблицаОстатков.Период,
+	3
+ИЗ
+	ТаблицаОстатков КАК ТаблицаОстатков
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Остатки12.КонОст,
+	Остатки12.КонОстФакт,
+	"Конечный остаток",
+	ДОБАВИТЬКДАТЕ(&amp;НачалоПериода, МЕСЯЦ, 12),
+	3
+ИЗ
+	Остатки12 КАК Остатки12</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ВП</dataPath>
+		<expression>Выбор Когда План = 0 Тогда 0 Иначе Факт / План *100 Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>%</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=3; ЧДЦ=0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Абс</dataPath>
+		<expression>Факт - План</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Абс</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>План</dataPath>
+		<expression>Сумма(План)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Факт</dataPath>
+		<expression>Сумма(Факт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВП</dataPath>
+		<expression>Выбор когда сумма(План) =0 тогда 0 иначе Сумма(Факт) / Сумма(План) *100 Конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Абс</dataPath>
+		<expression>Сумма(Факт)-Сумма(План)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Бюджет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Бюджет</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">Документ.БюджетГод.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>РасходыСберОтдельно</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расходы за счет сберережений</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>План</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Факт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Абс</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Бюджет</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ВариантыБюджетов.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>ccbdc38e-7530-4450-bf7e-e98d94b7e1bc</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СтатьяДР.Порядок</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#DEFFDE</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>План</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Факт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВП</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E2F9F9</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВП</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>План</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Факт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">02Февраль</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FDF4F6</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВП</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#0E0EF6</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Абс</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Абс</dcsset:left>
+							<dcsset:comparisonType>Less</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бюджет ДДС</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПериодДДС</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ПериодДДС</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПериодДДС</dcsset:left>
+									<dcsset:comparisonType>Greater</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.КонецПериода</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Итого</v8:content>
+										</v8:item>
+									</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>НомерДляСортировки</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>СтатьяДР</dcsset:field>
+								<dcsset:groupType>Hierarchy</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:outputParameters>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+								<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+							</dcscor:item>
+						</dcsset:outputParameters>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтправитьПоEMAIL" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтправитьПоEMAIL</CommandName>
+				<ExtendedTooltip name="ФормаОтправитьПоEMAILРасширеннаяПодсказка" id="49"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Тема" id="5">
+			<DataPath>Объект.Тема</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТемаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<UsualGroup name="Группа2" id="25">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<Pages name="Группа3" id="26">
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<Page name="Заметка" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заметка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заметка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ЗаметкаРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<InputField name="Содержание" id="7">
+									<DataPath>Объект.Содержание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<ContextMenu name="СодержаниеКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="54"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="РасчетСтоимости" id="28">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расчет стоимости</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расчет стоимости</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="РасчетСтоимостиРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<InputField name="ТипЦен" id="31">
+									<DataPath>Объект.ТипЦен</DataPath>
+									<ContextMenu name="ТипЦенКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ТипЦенРасширеннаяПодсказка" id="56"/>
+									<Events>
+										<Event name="OnChange">ТипЦенПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="Группа4" id="44">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="57"/>
+									<ChildItems>
+										<InputField name="Валюта" id="40">
+											<DataPath>Объект.Валюта</DataPath>
+											<ContextMenu name="ВалютаКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="58"/>
+											<Events>
+												<Event name="OnChange">ВалютаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Курс" id="42">
+											<DataPath>Объект.Курс</DataPath>
+											<ContextMenu name="КурсКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="59"/>
+											<Events>
+												<Event name="OnChange">КурсПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Кратность" id="45">
+											<DataPath>Объект.Кратность</DataPath>
+											<ContextMenu name="КратностьКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="КратностьРасширеннаяПодсказка" id="60"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="Расчет" id="9">
+									<Representation>List</Representation>
+									<Width>10</Width>
+									<Footer>true</Footer>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.Расчет</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="РасчетКонтекстноеМеню" id="10"/>
+									<AutoCommandBar name="РасчетКоманднаяПанель" id="11"/>
+									<ExtendedTooltip name="РасчетРасширеннаяПодсказка" id="61"/>
+									<SearchStringAddition name="РасчетСтрокаПоиска" id="62">
+										<AdditionSource>
+											<Item>Расчет</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РасчетСтрокаПоискаКонтекстноеМеню" id="63"/>
+										<ExtendedTooltip name="РасчетСтрокаПоискаРасширеннаяПодсказка" id="64"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="РасчетСостояниеПросмотра" id="65">
+										<AdditionSource>
+											<Item>Расчет</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РасчетСостояниеПросмотраКонтекстноеМеню" id="66"/>
+										<ExtendedTooltip name="РасчетСостояниеПросмотраРасширеннаяПодсказка" id="67"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="РасчетУправлениеПоиском" id="68">
+										<AdditionSource>
+											<Item>Расчет</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="РасчетУправлениеПоискомКонтекстноеМеню" id="69"/>
+										<ExtendedTooltip name="РасчетУправлениеПоискомРасширеннаяПодсказка" id="70"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="РасчетНомерСтроки" id="12">
+											<DataPath>Объект.Расчет.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетНомерСтрокиКонтекстноеМеню" id="13"/>
+											<ExtendedTooltip name="РасчетНомерСтрокиРасширеннаяПодсказка" id="71"/>
+										</LabelField>
+										<InputField name="РасчетНоменклатура1" id="33">
+											<DataPath>Объект.Расчет.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетНоменклатура1КонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="РасчетНоменклатура1РасширеннаяПодсказка" id="72"/>
+											<Events>
+												<Event name="OnChange">РасчетНоменклатура1ПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="РасчетНоменклатураСтрока" id="38">
+											<DataPath>Объект.Расчет.НоменклатураСтрока</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цель расходования</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетНоменклатураСтрокаКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="РасчетНоменклатураСтрокаРасширеннаяПодсказка" id="73"/>
+										</InputField>
+										<InputField name="РасчетТипЦенТ" id="36">
+											<DataPath>Объект.Расчет.ТипЦенТ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип цен</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетТипЦенТКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="РасчетТипЦенТРасширеннаяПодсказка" id="74"/>
+											<Events>
+												<Event name="OnChange">РасчетТипЦенТПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="РасчетКоличество" id="16">
+											<DataPath>Объект.Расчет.Количество</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.Расчет.TotalКоличество</FooterDataPath>
+											<ContextMenu name="РасчетКоличествоКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="РасчетКоличествоРасширеннаяПодсказка" id="75"/>
+											<Events>
+												<Event name="OnChange">РасчетКоличествоПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="РасчетЦена" id="18">
+											<DataPath>Объект.Расчет.Цена</DataPath>
+											<SkipOnInput>false</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетЦенаКонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="РасчетЦенаРасширеннаяПодсказка" id="76"/>
+											<Events>
+												<Event name="OnChange">РасчетЦенаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="РасчетСумма" id="20">
+											<DataPath>Объект.Расчет.Сумма</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.Расчет.TotalСумма</FooterDataPath>
+											<ContextMenu name="РасчетСуммаКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="РасчетСуммаРасширеннаяПодсказка" id="77"/>
+											<Events>
+												<Event name="OnChange">РасчетСуммаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="РасчетСуммаРегл" id="47">
+											<DataPath>Объект.Расчет.СуммаРегл</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.Расчет.TotalСуммаРегл</FooterDataPath>
+											<ContextMenu name="РасчетСуммаРеглКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="РасчетСуммаРеглРасширеннаяПодсказка" id="78"/>
+										</InputField>
+										<InputField name="РасчетСтатьяДР" id="22">
+											<DataPath>Объект.Расчет.СтатьяДР</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетСтатьяДРКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="РасчетСтатьяДРРасширеннаяПодсказка" id="79"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="Реквизиты" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реквизиты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реквизиты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="РеквизитыРасширеннаяПодсказка" id="80"/>
+							<ChildItems>
+								<UsualGroup name="Группа1" id="24">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="81"/>
+									<ChildItems>
+										<InputField name="Номер" id="1">
+											<DataPath>Объект.Number</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+											<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="82"/>
+										</InputField>
+										<InputField name="Дата" id="3">
+											<DataPath>Объект.Date</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+											<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="83"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Заметка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтправитьПоEMAIL" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить по EMAIL</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить по EMAIL</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьПоEMAIL</Action>
+		</Command>
+	</Commands>
+</Form>

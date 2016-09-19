@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="c53fa609-8ebe-49fc-8209-92a24adedb73">
+		<Properties>
+			<Name>Планирование</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планирование</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ИконкаПланирование48х48</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиДоходовРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ДенежныеСредства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоКошелькам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.БюджетГод</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсключаемыеСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СравнениеБюджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СкоростьРасходованияСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.БюджетДДС_до_090912</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СравнениеСтатьиПоПериодам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Банки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Кошельки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Резюме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Валюты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Пользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыБанковскихСчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТипыКошельков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВалютныйУчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВалютаРегламентированногоУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Заметка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтруктураСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДинамикаБаланса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиДереваБюджета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЛимитыОвердрафта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Баланс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.БюджетДДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкаОтображенияБюджета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоНоменклатуре</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.БюджетМесяц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыКошельков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Баланс2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Проекты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыПоПроектам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СбереженияИВозвраты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыКошельков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЮрФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиСредствПрогноз</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоСтатьямИКошелькам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоСтатьямДР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Приоритеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщийМодуль2Сервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КалендарьМесяц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Месяцы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Баланс3</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОпцииБюджета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОпцииСтатей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоДепозитам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидСуммыКэша</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПериодичностьСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПериодыДляПериодичныхСтатей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗаполнениеМесяцаПоШаблону</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПостоянныеРасходы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Enum uuid="4b8dda0b-1c78-42c4-9174-3d53599428ad">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.НачислениеПроцентовНаДепозит" category="Ref">
+				<xr:TypeId>205e3c3e-bf02-43d8-8955-b6d93e069933</xr:TypeId>
+				<xr:ValueId>b10ce00a-7cb9-4f92-990f-8ad0c1b231e1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.НачислениеПроцентовНаДепозит" category="Manager">
+				<xr:TypeId>2e89611e-235b-410a-8335-94f39d53e1b5</xr:TypeId>
+				<xr:ValueId>3e20f0de-f809-48c0-90da-2c361e19eeb5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.НачислениеПроцентовНаДепозит" category="List">
+				<xr:TypeId>538bdb32-4d9a-448f-a182-3b9ecfa23204</xr:TypeId>
+				<xr:ValueId>773eb588-bfd1-41ab-ba44-4fb3567fca98</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>НачислениеПроцентовНаДепозит</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисление процентов на депозит</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>когда банк начисляет проценты, в конце месяца или в день открытия депо, через каждый месяц</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="67dbb28a-96a5-4e8f-8d48-797618dc7b4a">
+				<Properties>
+					<Name>ВПоследнийДеньМесяца</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В последний день месяца</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bb1e638a-3293-4a15-8939-6f8190a09789">
+				<Properties>
+					<Name>ВДеньОткрытияДепозита</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В день открытия депозита</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

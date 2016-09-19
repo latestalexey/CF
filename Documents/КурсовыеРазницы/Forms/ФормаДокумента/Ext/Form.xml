@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="21">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="43"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Кошелек" id="5">
+			<DataPath>Объект.Кошелек</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КошелекКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="КошелекРасширеннаяПодсказка" id="44"/>
+			<Events>
+				<Event name="OnChange">КошелекПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelDecoration name="Декорация2" id="33">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Если курс не указан - будет использован курс ЦБ</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация2КонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="45"/>
+		</LabelDecoration>
+		<UsualGroup name="Группа4" id="31">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<InputField name="Валюта" id="7">
+					<DataPath>Объект.Валюта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="47"/>
+					<Events>
+						<Event name="OnChange">ВалютаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Курс" id="9">
+					<DataPath>Объект.Курс</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КурсКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<Button name="ОбновитьКурс" id="35">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьКурс</CommandName>
+					<ExtendedTooltip name="ОбновитьКурсРасширеннаяПодсказка" id="49"/>
+				</Button>
+				<InputField name="Кратность" id="11">
+					<DataPath>Объект.Кратность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КратностьКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="КратностьРасширеннаяПодсказка" id="50"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="25">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<InputField name="Сумма" id="22">
+					<DataPath>Объект.Сумма</DataPath>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<Button name="Рассчитать" id="24">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Рассчитать</CommandName>
+					<ExtendedTooltip name="РассчитатьРасширеннаяПодсказка" id="53"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа5" id="32">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<CheckBoxField name="Бюджет" id="13">
+					<DataPath>Объект.Бюджет</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="БюджетКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="БюджетРасширеннаяПодсказка" id="55"/>
+				</CheckBoxField>
+				<InputField name="СтатьяДР" id="15">
+					<DataPath>Объект.СтатьяДР</DataPath>
+					<ContextMenu name="СтатьяДРКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="СтатьяДРРасширеннаяПодсказка" id="56"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Проект" id="19">
+			<DataPath>Объект.Проект</DataPath>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<UsualGroup name="Группа3" id="30">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<CheckBoxField name="ЭтоПрогноз" id="26">
+					<DataPath>Объект.ЭтоПрогноз</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЭтоПрогнозКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЭтоПрогнозРасширеннаяПодсказка" id="59"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="17">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<UsualGroup name="Группа6" id="40">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<CheckBoxField name="ОтразитьВСбережениях" id="36">
+					<DataPath>Объект.ОтразитьВСбережениях</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтразитьВСбереженияхКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ОтразитьВСбереженияхРасширеннаяПодсказка" id="62"/>
+				</CheckBoxField>
+				<InputField name="СтатьяДРСбер" id="38">
+					<DataPath>Объект.СтатьяДРСбер</DataPath>
+					<ContextMenu name="СтатьяДРСберКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СтатьяДРСберРасширеннаяПодсказка" id="63"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.КурсовыеРазницы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Рассчитать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Рассчитать</Action>
+		</Command>
+		<Command name="ОбновитьКурс" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить курс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить курс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьКурс</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.ДенежныеСредства.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>AccumulationRegister.БДР.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>1:9d1fc1a2-952f-4dd5-b452-45030bde6147</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

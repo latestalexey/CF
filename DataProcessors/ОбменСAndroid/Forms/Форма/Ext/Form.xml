@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ВыполнитьОбмен" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+				<ExtendedTooltip name="ВыполнитьОбменРасширеннаяПодсказка" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направления обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<CheckBoxField name="Загрузка" id="13">
+					<DataPath>Загрузка</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагрузкаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ЗагрузкаРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+				<CheckBoxField name="Выгрузка" id="15">
+					<DataPath>Выгрузка</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыгрузкаКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ВыгрузкаРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="УдалитьДокументыНаAndroid" id="4">
+			<DataPath>УдалитьДокументыНаAndroid</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УдалитьДокументыНаAndroidКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="УдалитьДокументыНаAndroidРасширеннаяПодсказка" id="41"/>
+		</CheckBoxField>
+		<InputField name="Период" id="2">
+			<DataPath>Период</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="3"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<CheckBoxField name="ВыгрузитьБюджет" id="6">
+			<DataPath>ВыгрузитьБюджет</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыгрузитьБюджетКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="ВыгрузитьБюджетРасширеннаяПодсказка" id="43"/>
+		</CheckBoxField>
+		<InputField name="Бюджет" id="8">
+			<DataPath>Бюджет</DataPath>
+			<ContextMenu name="БюджетКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="БюджетРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<UsualGroup name="Группа3" id="28">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<UsualGroup name="Группа5" id="36">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<CheckBoxField name="ТолькоТекущийМесяц" id="10">
+							<DataPath>ТолькоТекущийМесяц</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТолькоТекущийМесяцКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ТолькоТекущийМесяцРасширеннаяПодсказка" id="47"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВесьБюджет" id="29">
+							<DataPath>ВесьБюджет</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВесьБюджетКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ВесьБюджетРасширеннаяПодсказка" id="48"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа4" id="33">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<RadioButtonField name="ТелоИлиВложение" id="34">
+							<DataPath>ТелоИлиВложение</DataPath>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Тело письма</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Вложение</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ТелоИлиВложениеКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ТелоИлиВложениеРасширеннаяПодсказка" id="50"/>
+						</RadioButtonField>
+						<CheckBoxField name="АрхивироватьВложение" id="31">
+							<DataPath>АрхивироватьВложение</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="АрхивироватьВложениеКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="АрхивироватьВложениеРасширеннаяПодсказка" id="51"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="21">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<CheckBoxField name="ЗагрузитьИзФайла" id="19">
+					<DataPath>ЗагрузитьИзФайла</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагрузитьИзФайлаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ЗагрузитьИзФайлаРасширеннаяПодсказка" id="53"/>
+				</CheckBoxField>
+				<InputField name="ФайлЗагрузки" id="17">
+					<DataPath>ФайлЗагрузки</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ФайлЗагрузкиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ФайлЗагрузкиРасширеннаяПодсказка" id="54"/>
+					<Events>
+						<Event name="StartChoice">ФайлЗагрузкиНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="УчетнаяЗапись" id="22">
+			<DataPath>УчетнаяЗапись</DataPath>
+			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="55"/>
+		</InputField>
+		<RadioButtonField name="Pop3imap" id="24">
+			<DataPath>Pop3imap</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>POP3</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>IMAP</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="Pop3imapКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="Pop3imapРасширеннаяПодсказка" id="56"/>
+		</RadioButtonField>
+		<CheckBoxField name="SSLimap" id="26">
+			<DataPath>SSLimap</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="SSLimapКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="SSLimapРасширеннаяПодсказка" id="57"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбменСAndroid</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Период" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<Save>
+				<Field>Период</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="УдалитьДокументыНаAndroid" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить документы на android за период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>УдалитьДокументыНаAndroid</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВыгрузитьБюджет" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить бюджет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыгрузитьБюджет</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Бюджет" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.БюджетГод</v8:Type>
+			</Type>
+			<Save>
+				<Field>Бюджет</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТолькоТекущийМесяц" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только текущий месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТолькоТекущийМесяц</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Загрузка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Загрузка</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Выгрузка" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Выгрузка</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФайлЗагрузки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлЗагрузки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ЗагрузитьИзФайла" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ЗагрузитьИзФайла</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="УчетнаяЗапись" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+			</Type>
+			<Save>
+				<Field>УчетнаяЗапись</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Pop3imap" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>POP3/ IMAP</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>Pop3imap</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="SSLimap" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>SSL IMAP</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>SSLimap</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВесьБюджет" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Весь бюджет (в т.ч. нулевые статьи)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АрхивироватьВложение" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архивировать вложение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>АрхивироватьВложение</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТелоИлиВложение" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тело (0) или вложение (1)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ТелоИлиВложение</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьОбмен" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОбмен</Action>
+		</Command>
+	</Commands>
+</Form>

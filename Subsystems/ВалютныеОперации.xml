@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="151a3d1d-3330-4c09-8c64-3e1385c83653">
+		<Properties>
+			<Name>ВалютныеОперации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валютные операции</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Валюты48х48</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КурсыВалют</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВалютаРегламентированногоУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаКурсовВалют</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДинамикаКурсовВалют</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КурсовыеРазницы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Переоценка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">2d627dcc-161e-4773-a3b3-b78b6756b625</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ad3f214a-d2db-4578-b09d-7778ca5037f4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПроведениеВалютыПоПартиям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">60953c11-9b9a-4dd2-81f8-595ffa236382</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">0c1b5efc-bf86-40d0-8993-a984f2976c14</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Справочники</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

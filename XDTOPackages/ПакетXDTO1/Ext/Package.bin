@@ -1,0 +1,222 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="cf">
+	<property name="report">
+		<typeDef xsi:type="ObjectType">
+			<property name="title" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="titledetail" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="board_list" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="date_from" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+			<property name="date_to" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+			<property name="client_code" type="xs:unsignedShort" lowerBound="1" form="Attribute"/>
+			<property name="client_short_name" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="agreement_number" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="agreement_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+			<property name="account_count" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+			<property name="client_full_name" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="is_trade_tariff_plan" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+			<property name="is_new_tariff_plan" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+			<property name="build_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+			<property name="is_same_commission" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+			<property name="portfolio" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="acc_client_code" type="xs:unsignedShort" lowerBound="1" form="Attribute"/>
+			<property name="account_totally_line">
+				<typeDef xsi:type="ObjectType">
+					<property name="item" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="total_description" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="total_value" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="pos_description" type="xs:string" lowerBound="0" form="Attribute"/>
+							<property name="pos_amount" type="xs:decimal" lowerBound="0" form="Attribute"/>
+							<property name="neg_description" type="xs:string" lowerBound="0" form="Attribute"/>
+							<property name="neg_amount" type="xs:decimal" lowerBound="0" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="liability_position">
+				<typeDef xsi:type="ObjectType">
+					<property name="item">
+						<typeDef xsi:type="ObjectType">
+							<property name="client_code" type="xs:unsignedShort" lowerBound="1" form="Attribute"/>
+							<property name="type" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="charge_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="ground" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="charge_amount" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="rest_amount" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="rest_amount_cb" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="currency" type="xs:string" lowerBound="1" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="guarantee_info_line">
+				<typeDef xsi:type="ObjectType">
+					<property name="item">
+						<typeDef xsi:type="ObjectType">
+							<property name="amount" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="additional" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="in_money" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="free_balance" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="free_money" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="needed_guarantee" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="needed_in_money" type="xs:decimal" lowerBound="1" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="portfolio_position">
+				<typeDef xsi:type="ObjectType">
+					<property name="item" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="deal_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="security_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_symb" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="expiration_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="marged" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="price" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="quantity" type="xs:unsignedInt" lowerBound="1" form="Attribute"/>
+							<property name="end_price" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="deal_sign" type="xs:byte" lowerBound="1" form="Attribute"/>
+							<property name="deal_symbol" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="deal_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="board_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="roundto" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="common_deal">
+				<typeDef xsi:type="ObjectType">
+					<property name="item" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="deal_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="clear_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="security_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_symb" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="expiration_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="price" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="quantity" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="order_number" type="xs:unsignedLong" lowerBound="1" form="Attribute"/>
+							<property name="deal_number" type="xs:unsignedInt" lowerBound="1" form="Attribute"/>
+							<property name="deal_sign" type="xs:byte" lowerBound="1" form="Attribute"/>
+							<property name="deal_symbol" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="deal_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="board_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="roundto" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="put_call" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="registration_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="price_rur" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="close_price" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="var_marg" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="comm_trade" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="comm_stock" type="xs:decimal" lowerBound="1" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="common_deal_rtsstandard">
+				<typeDef xsi:type="ObjectType">
+					<property name="item">
+						<typeDef xsi:type="ObjectType">
+							<property name="deal_time" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="clear_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="security_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_symb" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="expiration_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="price" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="quantity" type="xs:unsignedShort" lowerBound="1" form="Attribute"/>
+							<property name="order_number" type="xs:unsignedLong" lowerBound="1" form="Attribute"/>
+							<property name="deal_number" type="xs:unsignedInt" lowerBound="1" form="Attribute"/>
+							<property name="deal_sign" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="deal_symbol" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="deal_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="board_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="comment" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="delivery_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="roundto" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="grn_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="broker_comm" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="stock_comm" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="deal_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="volume" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="registration_code" type="xs:string" lowerBound="1" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="rps_deal_rtsstandard">
+				<typeDef xsi:type="ObjectType">
+					<property name="item" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="deal_time" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="clear_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="security_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_symb" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="expiration_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="price" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="quantity" type="xs:unsignedInt" lowerBound="1" form="Attribute"/>
+							<property name="order_number" type="xs:unsignedLong" lowerBound="1" form="Attribute"/>
+							<property name="deal_number" type="xs:unsignedInt" lowerBound="1" form="Attribute"/>
+							<property name="deal_sign" type="xs:byte" lowerBound="1" form="Attribute"/>
+							<property name="deal_symbol" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="deal_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="board_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="comment" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="delivery_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="roundto" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="grn_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="broker_comm" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="stock_comm" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="deal_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="volume" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="registration_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="repo_number" type="xs:unsignedInt" lowerBound="0" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="option_execution">
+				<typeDef xsi:type="ObjectType">
+					<property name="item">
+						<typeDef xsi:type="ObjectType">
+							<property name="operation_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="security_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_code" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_symb" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="security_type_text" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="quantity" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="oper_sign" type="xs:byte" lowerBound="1" form="Attribute"/>
+							<property name="price" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="board_name" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="deal_text" type="xs:string" lowerBound="1" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="money_move">
+				<typeDef xsi:type="ObjectType">
+					<property name="item" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="operation_date" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+							<property name="amount" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							<property name="comment" type="xs:string" lowerBound="1" form="Attribute"/>
+							<property name="board_name" type="xs:string" lowerBound="1" form="Attribute"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+</package>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="23">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="Порядок" id="7">
+					<DataPath>Объект.Порядок</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПорядокКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СтатьяРодитель" id="19">
+			<DataPath>Объект.СтатьяРодитель</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>если эта статья - в группе "Расход за счет сбережений", то можно указать родительскую статью из группы "Расход", чтобы в отчете Бюджет ДДС можно было видеть сводный расход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СтатьяРодительКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СтатьяРодительРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<CheckBoxField name="ЭтоСбережение" id="24">
+			<DataPath>Объект.ЭтоСбережение</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбережение или возврат</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЭтоСбережениеКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ЭтоСбережениеРасширеннаяПодсказка" id="41"/>
+			<Events>
+				<Event name="OnChange">ЭтоСбережениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="Группа2" id="26">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<InputField name="СуммаНакопления" id="11">
+					<DataPath>Объект.СуммаСбережения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СуммаНакопленияКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="СуммаНакопленияРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="СрокНакопления" id="9">
+					<DataPath>Объект.СрокСбережения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СрокНакопленияКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="СрокНакопленияРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="27">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<InputField name="СтатьяСбережения" id="17">
+					<DataPath>Объект.СтатьяСбережения</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>если создаем статью возврата сбережения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтатьяСбереженияКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СтатьяСбереженияРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="СтатьяВозвратаСбережения" id="15">
+					<DataPath>Объект.СтатьяВозвратаСбережения</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>если создаем статью сбережения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтатьяВозвратаСбереженияКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="СтатьяВозвратаСбереженияРасширеннаяПодсказка" id="47"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ЗнакДвижения" id="28">
+			<DataPath>Объект.ЗнакДвижения</DataPath>
+			<ContextMenu name="ЗнакДвиженияКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ЗнакДвиженияРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<InputField name="Приоритет" id="30">
+			<DataPath>Объект.Приоритет</DataPath>
+			<ContextMenu name="ПриоритетКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="Порядок1" id="32">
+			<DataPath>Объект.Порядок</DataPath>
+			<ContextMenu name="Порядок1КонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="Порядок1РасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="Периодичность" id="34">
+			<DataPath>Объект.Периодичность</DataPath>
+			<ContextMenu name="ПериодичностьКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ПериодичностьРасширеннаяПодсказка" id="52"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СтатьиДоходовРасходов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,3368 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Width>40</Width>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<ChildItemsWidth>Equal</ChildItemsWidth>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Типы" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Types</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ТипыРасширеннаяПодсказка" id="181"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ТипыПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="Математический" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Математический</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Mathematic</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Простой математический калькулятор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Simple mathematics calculator</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="МатематическийРасширеннаяПодсказка" id="182"/>
+					<ChildItems>
+						<UsualGroup name="ВерхняяГруппа" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Верхняя группа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Top group</v8:content>
+								</v8:item>
+							</Title>
+							<Width>38</Width>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>LeftNarrowest</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ВерхняяГруппаРасширеннаяПодсказка" id="183"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОкругления" id="97">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа округления</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОкругленияРасширеннаяПодсказка" id="184"/>
+									<ChildItems>
+										<InputField name="Округление" id="98">
+											<DataPath>Округление</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки округления</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Settings of rounding</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>5</Width>
+											<Height>1</Height>
+											<ListChoiceMode>true</ListChoiceMode>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>cut</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>cut</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">cut</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>up</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>up</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">up</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>5/4</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>5/4</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">5/4</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ОкруглениеКонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="ОкруглениеРасширеннаяПодсказка" id="185"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастроек</Event>
+											</Events>
+										</InputField>
+										<InputField name="Обрезание" id="100">
+											<DataPath>Обрезание</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка точности</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Settings of accuracy</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>5</Width>
+											<Height>1</Height>
+											<ListChoiceMode>true</ListChoiceMode>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>F</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>F</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">F</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>4</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>4</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">4</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>2</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>2</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">2</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>1</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>1</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>0</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>0</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">0</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ОбрезаниеКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ОбрезаниеРасширеннаяПодсказка" id="186"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастроек</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="История" id="68">
+									<DataPath>История</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>История</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>History</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Height>1</Height>
+									<ContextMenu name="ИсторияКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="187"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СредняяГруппа" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Средняя группа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Midle group</v8:content>
+								</v8:item>
+							</Title>
+							<Width>38</Width>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СредняяГруппаРасширеннаяПодсказка" id="188"/>
+							<ChildItems>
+								<InputField name="ОкноВвода" id="62">
+									<DataPath>ОкноВвода</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<ContextMenu name="ОкноВводаКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ОкноВводаРасширеннаяПодсказка" id="189"/>
+									<Events>
+										<Event name="OnChange">ДействиеРавно</Event>
+									</Events>
+								</InputField>
+								<Button name="Стереть" id="64">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Стереть</CommandName>
+									<ExtendedTooltip name="СтеретьРасширеннаяПодсказка" id="190"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="КнопкиОбщаяГруппа" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки общая группа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Common buttons group</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="КнопкиОбщаяГруппаРасширеннаяПодсказка" id="191"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПамяти" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Memory group</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа памяти</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПамятиРасширеннаяПодсказка" id="192"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПамяти1" id="128">
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПамяти1РасширеннаяПодсказка" id="193"/>
+											<ChildItems>
+												<InputField name="Память" id="66">
+													<DataPath>Память</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Память</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Memory</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Width>15</Width>
+													<Height>1</Height>
+													<ContextMenu name="ПамятьКонтекстноеМеню" id="67"/>
+													<ExtendedTooltip name="ПамятьРасширеннаяПодсказка" id="194"/>
+												</InputField>
+												<Button name="MОчистить" id="72">
+													<Type>UsualButton</Type>
+													<Width>4</Width>
+													<Height>1</Height>
+													<CommandName>Form.Command.MОчистить</CommandName>
+													<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<ExtendedTooltip name="MОчиститьРасширеннаяПодсказка" id="195"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПамяти2" id="129">
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПамяти2РасширеннаяПодсказка" id="196"/>
+											<ChildItems>
+												<InputField name="Память1" id="119">
+													<DataPath>Память1</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Память2</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Memory2</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Width>15</Width>
+													<ContextMenu name="Память1КонтекстноеМеню" id="120"/>
+													<ExtendedTooltip name="Память1РасширеннаяПодсказка" id="197"/>
+												</InputField>
+												<Button name="MОчистить1" id="123">
+													<Type>UsualButton</Type>
+													<Width>4</Width>
+													<Height>1</Height>
+													<CommandName>Form.Command.MОчистить1</CommandName>
+													<ExtendedTooltip name="MОчистить1РасширеннаяПодсказка" id="198"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОчистки" id="114">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа очистки</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Cleaning group</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОчисткиРасширеннаяПодсказка" id="199"/>
+									<ChildItems>
+										<Button name="AllClear" id="73">
+											<Type>UsualButton</Type>
+											<Width>6</Width>
+											<Height>2</Height>
+											<CommandName>Form.Command.AllClear</CommandName>
+											<BackColor>#F5B9B9</BackColor>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ExtendedTooltip name="AllClearРасширеннаяПодсказка" id="200"/>
+										</Button>
+										<Button name="Clear" id="76">
+											<Type>UsualButton</Type>
+											<Width>6</Width>
+											<Height>2</Height>
+											<CommandName>Form.Command.Clear</CommandName>
+											<TextColor>#FF0000</TextColor>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ExtendedTooltip name="ClearРасширеннаяПодсказка" id="201"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКнопок" id="70">
+							<Width>38</Width>
+							<Height>3</Height>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="202"/>
+							<ChildItems>
+								<UsualGroup name="КнопкиЦентральнаяГруппа" id="77">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопки центральная группа</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Central buttons group</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="КнопкиЦентральнаяГруппаРасширеннаяПодсказка" id="203"/>
+									<ChildItems>
+										<UsualGroup name="Колонка1" id="78">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ChildItemsWidth>Equal</ChildItemsWidth>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Колонка1РасширеннаяПодсказка" id="204"/>
+											<ChildItems>
+												<Button name="МПлюс" id="91">
+													<Type>UsualButton</Type>
+													<Width>6</Width>
+													<Height>1</Height>
+													<CommandName>Form.Command.MПлюс</CommandName>
+													<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<ExtendedTooltip name="МПлюсРасширеннаяПодсказка" id="205"/>
+												</Button>
+												<Button name="MПлюс1" id="115">
+													<Type>UsualButton</Type>
+													<Width>6</Width>
+													<CommandName>Form.Command.MПлюс1</CommandName>
+													<ExtendedTooltip name="MПлюс1РасширеннаяПодсказка" id="206"/>
+												</Button>
+												<UsualGroup name="Группа1" id="124">
+													<Group>Vertical</Group>
+													<Representation>NormalSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="207"/>
+													<ChildItems>
+														<Button name="Кнопка7" id="80">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка7</CommandName>
+															<ExtendedTooltip name="Кнопка7РасширеннаяПодсказка" id="208"/>
+														</Button>
+														<Button name="Кнопка4" id="81">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка4</CommandName>
+															<ExtendedTooltip name="Кнопка4РасширеннаяПодсказка" id="209"/>
+														</Button>
+														<Button name="Кнопка1" id="82">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка1</CommandName>
+															<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="210"/>
+														</Button>
+														<Button name="Кнопка0" id="83">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка0</CommandName>
+															<ExtendedTooltip name="Кнопка0РасширеннаяПодсказка" id="211"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Колонка2" id="84">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ChildItemsWidth>Equal</ChildItemsWidth>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Колонка2РасширеннаяПодсказка" id="212"/>
+											<ChildItems>
+												<Button name="ММинус" id="85">
+													<Type>UsualButton</Type>
+													<Width>6</Width>
+													<Height>1</Height>
+													<CommandName>Form.Command.MМинус</CommandName>
+													<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<ExtendedTooltip name="ММинусРасширеннаяПодсказка" id="213"/>
+												</Button>
+												<Button name="MМинус1" id="116">
+													<Type>UsualButton</Type>
+													<Width>6</Width>
+													<CommandName>Form.Command.MМинус1</CommandName>
+													<ExtendedTooltip name="MМинус1РасширеннаяПодсказка" id="214"/>
+												</Button>
+												<UsualGroup name="Группа2" id="125">
+													<Group>Vertical</Group>
+													<Representation>NormalSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="215"/>
+													<ChildItems>
+														<Button name="Кнопка8" id="86">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка8</CommandName>
+															<ExtendedTooltip name="Кнопка8РасширеннаяПодсказка" id="216"/>
+														</Button>
+														<Button name="Кнопка5" id="87">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка5</CommandName>
+															<ExtendedTooltip name="Кнопка5РасширеннаяПодсказка" id="217"/>
+														</Button>
+														<Button name="Кнопка2" id="88">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка2</CommandName>
+															<ExtendedTooltip name="Кнопка2РасширеннаяПодсказка" id="218"/>
+														</Button>
+														<Button name="Кнопка000" id="89">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка000</CommandName>
+															<ExtendedTooltip name="Кнопка000РасширеннаяПодсказка" id="219"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Колонка3" id="90">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ChildItemsWidth>Equal</ChildItemsWidth>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Колонка3РасширеннаяПодсказка" id="220"/>
+											<ChildItems>
+												<Button name="MВывести" id="79">
+													<Type>UsualButton</Type>
+													<Width>6</Width>
+													<Height>1</Height>
+													<CommandName>Form.Command.MВывести</CommandName>
+													<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<ExtendedTooltip name="MВывестиРасширеннаяПодсказка" id="221"/>
+												</Button>
+												<Button name="MВывести1" id="117">
+													<Type>UsualButton</Type>
+													<Width>6</Width>
+													<CommandName>Form.Command.MВывести1</CommandName>
+													<ExtendedTooltip name="MВывести1РасширеннаяПодсказка" id="222"/>
+												</Button>
+												<UsualGroup name="Группа3" id="126">
+													<Group>Vertical</Group>
+													<Representation>NormalSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="223"/>
+													<ChildItems>
+														<Button name="Кнопка9" id="92">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка9</CommandName>
+															<ExtendedTooltip name="Кнопка9РасширеннаяПодсказка" id="224"/>
+														</Button>
+														<Button name="Кнопка6" id="93">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка6</CommandName>
+															<ExtendedTooltip name="Кнопка6РасширеннаяПодсказка" id="225"/>
+														</Button>
+														<Button name="Кнопка3" id="94">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.Кнопка3</CommandName>
+															<ExtendedTooltip name="Кнопка3РасширеннаяПодсказка" id="226"/>
+														</Button>
+														<Button name="КнопкаРазделитель" id="95">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.КнопкаРазделитель</CommandName>
+															<ExtendedTooltip name="КнопкаРазделительРасширеннаяПодсказка" id="227"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="КнопкиДействийГруппа" id="96">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопки действий группа</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Action buttons group</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="КнопкиДействийГруппаРасширеннаяПодсказка" id="228"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаКнопокСистемных" id="122">
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКнопокСистемныхРасширеннаяПодсказка" id="229"/>
+											<ChildItems>
+												<UsualGroup name="Группа4" id="130">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="230"/>
+													<ChildItems>
+														<Button name="ПлюсМинус" id="75">
+															<Type>UsualButton</Type>
+															<Width>7</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ПлюсМинус</CommandName>
+															<ExtendedTooltip name="ПлюсМинусРасширеннаяПодсказка" id="231"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Группа5" id="131">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="232"/>
+													<ChildItems>
+														<Button name="MarkUp" id="74">
+															<Type>UsualButton</Type>
+															<Width>6</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ДействиеMarkUp</CommandName>
+															<ExtendedTooltip name="MarkUpРасширеннаяПодсказка" id="233"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Действия" id="102">
+											<Group>Horizontal</Group>
+											<Representation>NormalSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ДействияРасширеннаяПодсказка" id="234"/>
+											<ChildItems>
+												<UsualGroup name="ЛевыеДействия" id="103">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ЛевыеДействияРасширеннаяПодсказка" id="235"/>
+													<ChildItems>
+														<Button name="ДействиеПроцент" id="104">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ДействиеПроцент</CommandName>
+															<ExtendedTooltip name="ДействиеПроцентРасширеннаяПодсказка" id="236"/>
+														</Button>
+														<Button name="ДействиеУмножение" id="105">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ДействиеУмножение</CommandName>
+															<ExtendedTooltip name="ДействиеУмножениеРасширеннаяПодсказка" id="237"/>
+														</Button>
+														<Button name="ДействиеСложение" id="106">
+															<Type>UsualButton</Type>
+															<Width>8</Width>
+															<Height>4</Height>
+															<CommandName>Form.Command.ДействиеСложение</CommandName>
+															<ExtendedTooltip name="ДействиеСложениеРасширеннаяПодсказка" id="238"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ПравыеДействия" id="107">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ПравыеДействияРасширеннаяПодсказка" id="239"/>
+													<ChildItems>
+														<Button name="ДействиеКорень" id="108">
+															<Type>UsualButton</Type>
+															<Width>7</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ДействиеКорень</CommandName>
+															<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+															<ExtendedTooltip name="ДействиеКореньРасширеннаяПодсказка" id="240"/>
+														</Button>
+														<Button name="ДействиеДеление" id="109">
+															<Type>UsualButton</Type>
+															<Width>7</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ДействиеДеление</CommandName>
+															<ExtendedTooltip name="ДействиеДелениеРасширеннаяПодсказка" id="241"/>
+														</Button>
+														<Button name="ДействиеВычитание" id="110">
+															<Type>UsualButton</Type>
+															<Width>7</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ДействиеВычитание</CommandName>
+															<ExtendedTooltip name="ДействиеВычитаниеРасширеннаяПодсказка" id="242"/>
+														</Button>
+														<Button name="ДействиеРавно" id="111">
+															<Type>UsualButton</Type>
+															<DefaultItem>true</DefaultItem>
+															<Width>7</Width>
+															<Height>2</Height>
+															<CommandName>Form.Command.ДействиеРавно</CommandName>
+															<ExtendedTooltip name="ДействиеРавноРасширеннаяПодсказка" id="243"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Дисконтный" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дисконтный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Discount</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дисконтный (Кредитный). Возведение в степень, дисконтирование, расчет кредитных платежей.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Discount (Credit). Rating, discounting, credit payments calculating</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДисконтныйРасширеннаяПодсказка" id="244"/>
+					<ChildItems>
+						<UsualGroup name="Настройки" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings</v8:content>
+								</v8:item>
+							</Title>
+							<Width>38</Width>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="245"/>
+							<ChildItems>
+								<InputField name="ВыборМетодаРасчета" id="40">
+									<DataPath>Объект.МетодРасчета</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<TitleLocation>None</TitleLocation>
+									<Width>30</Width>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Простые % (Проц. погашаются, тело неизменно до конца срока)</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Simple interest (Percentages pay, body repayment in the end)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Простые</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сложные % (И тело и проц. погашаются в конце срока)</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Compound interest (Body and percentages repay in the end)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Сложные</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>С пропорциональным погашением тела (Платежи уменьшаются)</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>With proportional repayments (decreasing payments)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">СПропорциональнымПогашением</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Погашение равными платежами (Аннуитет)</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Repayment by equal payments (Annuity)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПогашениеРавнымиПлатежами</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВыборМетодаРасчетаКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ВыборМетодаРасчетаРасширеннаяПодсказка" id="246"/>
+									<Events>
+										<Event name="OnChange">ВыборМетодаРасчетаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="Пересчет" id="42">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Пересчет</CommandName>
+									<ExtendedTooltip name="ПересчетРасширеннаяПодсказка" id="247"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасчета" id="39">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расчета</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Calc group</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасчетаРасширеннаяПодсказка" id="248"/>
+							<ChildItems>
+								<UsualGroup name="Показатели" id="11">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показатели</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Attributes</v8:content>
+										</v8:item>
+									</Title>
+									<Width>33</Width>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПоказателиРасширеннаяПодсказка" id="249"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаСрока" id="23">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа срока</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Term group</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа срока</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСрокаРасширеннаяПодсказка" id="250"/>
+											<ChildItems>
+												<InputField name="СрокЛет" id="1">
+													<DataPath>Объект.СрокЛет</DataPath>
+													<DefaultItem>true</DefaultItem>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Срок в годах</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Term in years</v8:content>
+														</v8:item>
+													</ToolTip>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="СрокЛетКонтекстноеМеню" id="2"/>
+													<ExtendedTooltip name="СрокЛетРасширеннаяПодсказка" id="251"/>
+													<Events>
+														<Event name="OnChange">СрокЛетПриИзменении</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="НачислятьПомесячно" id="24">
+													<DataPath>Объект.НачислятьПомесячно</DataPath>
+													<SkipOnInput>true</SkipOnInput>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Начисление помесячно</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Charge monthly</v8:content>
+														</v8:item>
+													</ToolTip>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="НачислятьПомесячноКонтекстноеМеню" id="25"/>
+													<ExtendedTooltip name="НачислятьПомесячноРасширеннаяПодсказка" id="252"/>
+													<Events>
+														<Event name="OnChange">НачислятьПомесячноПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<LabelField name="Срок" id="26">
+													<DataPath>Объект.Срок</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Количество периодов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Number of cycles</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<ContextMenu name="СрокКонтекстноеМеню" id="27"/>
+													<ExtendedTooltip name="СрокРасширеннаяПодсказка" id="253"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаСтавки" id="28">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ставки</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Interest group</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ставки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСтавкиРасширеннаяПодсказка" id="254"/>
+											<ChildItems>
+												<InputField name="Ставка" id="5">
+													<DataPath>Объект.Ставка</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ставка в процентах годовых</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Interest in percentages</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Width>11</Width>
+													<ChoiceButton>false</ChoiceButton>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="СтавкаКонтекстноеМеню" id="6"/>
+													<ExtendedTooltip name="СтавкаРасширеннаяПодсказка" id="255"/>
+													<Events>
+														<Event name="OnChange">СтавкаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="МножительДисконтирования" id="3">
+													<DataPath>МножительДисконтирования</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коэффициент наращения</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Growth factor</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Width>8</Width>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧЦ=8; ЧДЦ=2</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>ЧЦ=8; ЧДЦ=2</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="МножительДисконтированияКонтекстноеМеню" id="4"/>
+													<ExtendedTooltip name="МножительДисконтированияРасширеннаяПодсказка" id="256"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="СуммаНачальная" id="7">
+											<DataPath>Объект.СуммаНачальная</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма исходная</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Initial sum</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>18</Width>
+											<ContextMenu name="СуммаНачальнаяКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="СуммаНачальнаяРасширеннаяПодсказка" id="257"/>
+											<Events>
+												<Event name="OnChange">СуммаНачальнаяПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СуммаКонечная" id="9">
+											<DataPath>Объект.СуммаКонечная</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма результирующая</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Finite sum</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>18</Width>
+											<ContextMenu name="СуммаКонечнаяКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="СуммаКонечнаяРасширеннаяПодсказка" id="258"/>
+											<Events>
+												<Event name="OnChange">СуммаКонечнаяПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Вычисление" id="12">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вычисление</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Calculating</v8:content>
+										</v8:item>
+									</Title>
+									<Width>4</Width>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ВычислениеРасширеннаяПодсказка" id="259"/>
+									<ChildItems>
+										<CheckBoxField name="ВычСрока" id="13">
+											<DataPath>ВычСрока</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вычислять срок</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Calculate term</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВычСрокаКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ВычСрокаРасширеннаяПодсказка" id="260"/>
+											<Events>
+												<Event name="OnChange">УправлениеВычислением</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="ВычСтавки" id="15">
+											<DataPath>ВычСтавки</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вычислять ставку</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Calculate interest</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВычСтавкиКонтекстноеМеню" id="16"/>
+											<ExtendedTooltip name="ВычСтавкиРасширеннаяПодсказка" id="261"/>
+											<Events>
+												<Event name="OnChange">УправлениеВычислением</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="ВычНачальной" id="19">
+											<DataPath>ВычНачальной</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вычислять начальную сумму</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Calculate initial sum</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВычНачальнойКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="ВычНачальнойРасширеннаяПодсказка" id="262"/>
+											<Events>
+												<Event name="OnChange">УправлениеВычислением</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="ВычКонечной" id="21">
+											<DataPath>ВычКонечной</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вычислять конечную сумму</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Calculate finite sum</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВычКонечнойКонтекстноеМеню" id="22"/>
+											<ExtendedTooltip name="ВычКонечнойРасширеннаяПодсказка" id="263"/>
+											<Events>
+												<Event name="OnChange">УправлениеВычислением</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПодробностей" id="57">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробнее</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>In details</v8:content>
+								</v8:item>
+							</Title>
+							<Width>38</Width>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодробностейРасширеннаяПодсказка" id="264"/>
+							<ChildItems>
+								<LabelField name="ПериодическиеПлатежи" id="44">
+									<DataPath>ПериодическиеПлатежи</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;Мин.платеж&gt;-&lt;Макс. платеж&gt;; &lt;Закрывающий платеж&gt;</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>&lt;Min payment&gt;-&lt;Max payment&gt;; &lt;Finite payment&gt;</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Width>19</Width>
+									<ContextMenu name="ПериодическиеПлатежиКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ПериодическиеПлатежиРасширеннаяПодсказка" id="265"/>
+								</LabelField>
+								<Table name="ТаблицаПлатежей" id="46">
+									<ReadOnly>true</ReadOnly>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Width>36</Width>
+									<Height>6</Height>
+									<Footer>true</Footer>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>Объект.ТаблицаПлатежей</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаПлатежейКонтекстноеМеню" id="47"/>
+									<AutoCommandBar name="ТаблицаПлатежейКоманднаяПанель" id="48">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаПлатежейРасширеннаяПодсказка" id="266"/>
+									<SearchStringAddition name="ТаблицаПлатежейСтрокаПоиска" id="267">
+										<AdditionSource>
+											<Item>ТаблицаПлатежей</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаПлатежейСтрокаПоискаКонтекстноеМеню" id="268"/>
+										<ExtendedTooltip name="ТаблицаПлатежейСтрокаПоискаРасширеннаяПодсказка" id="269"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаПлатежейСостояниеПросмотра" id="270">
+										<AdditionSource>
+											<Item>ТаблицаПлатежей</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаПлатежейСостояниеПросмотраКонтекстноеМеню" id="271"/>
+										<ExtendedTooltip name="ТаблицаПлатежейСостояниеПросмотраРасширеннаяПодсказка" id="272"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаПлатежейУправлениеПоиском" id="273">
+										<AdditionSource>
+											<Item>ТаблицаПлатежей</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаПлатежейУправлениеПоискомКонтекстноеМеню" id="274"/>
+										<ExtendedTooltip name="ТаблицаПлатежейУправлениеПоискомРасширеннаяПодсказка" id="275"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ТаблицаПлатежейНомерСтроки" id="49">
+											<DataPath>Объект.ТаблицаПлатежей.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>3</Width>
+											<ContextMenu name="ТаблицаПлатежейНомерСтрокиКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ТаблицаПлатежейНомерСтрокиРасширеннаяПодсказка" id="276"/>
+										</LabelField>
+										<InputField name="ТаблицаПлатежейСуммаПроцентов" id="53">
+											<DataPath>Объект.ТаблицаПлатежей.СуммаПроцентов</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма процентов</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Interest sum</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаПлатежей.TotalСуммаПроцентов</FooterDataPath>
+											<Width>9</Width>
+											<ContextMenu name="ТаблицаПлатежейСуммаПроцентовКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="ТаблицаПлатежейСуммаПроцентовРасширеннаяПодсказка" id="277"/>
+										</InputField>
+										<InputField name="ТаблицаПлатежейПлатеж" id="55">
+											<DataPath>Объект.ТаблицаПлатежей.Платеж</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаПлатежей.TotalПлатеж</FooterDataPath>
+											<Width>9</Width>
+											<ContextMenu name="ТаблицаПлатежейПлатежКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ТаблицаПлатежейПлатежРасширеннаяПодсказка" id="278"/>
+										</InputField>
+										<LabelField name="ТаблицаПлатежейОстатокТела" id="51">
+											<DataPath>Объект.ТаблицаПлатежей.ОстатокТела</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остаток тела долга</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Remaining debt</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>9</Width>
+											<ContextMenu name="ТаблицаПлатежейОстатокТелаКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ТаблицаПлатежейОстатокТелаРасширеннаяПодсказка" id="279"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Уравнение" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уравнение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Equation</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчет аглебраического уравнения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Aglebraichesky equations calculation</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="УравнениеРасширеннаяПодсказка" id="280"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРезультата" id="154">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа результата</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Result group</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРезультатаРасширеннаяПодсказка" id="281"/>
+							<ChildItems>
+								<InputField name="ОкноВвода1" id="152">
+									<DataPath>ОкноВвода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Width>33</Width>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ОкноВвода1КонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ОкноВвода1РасширеннаяПодсказка" id="282"/>
+								</InputField>
+								<Button name="УравнениеРасчитать" id="155">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.УравнениеРасчитать</CommandName>
+									<ExtendedTooltip name="УравнениеРасчитатьРасширеннаяПодсказка" id="283"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУравнениеКнопки" id="137">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУравнениеКнопкиРасширеннаяПодсказка" id="284"/>
+							<ChildItems>
+								<Button name="УравнениеСкобки" id="138">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеСкобки</CommandName>
+									<ExtendedTooltip name="УравнениеСкобкиРасширеннаяПодсказка" id="285"/>
+								</Button>
+								<Button name="УравнениеОкр" id="148">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеОкр</CommandName>
+									<ExtendedTooltip name="УравнениеОкрРасширеннаяПодсказка" id="286"/>
+								</Button>
+								<Button name="УравнениеСтепень" id="147">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеСтепень</CommandName>
+									<Font faceName="Arial" height="9" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute"/>
+									<ExtendedTooltip name="УравнениеСтепеньРасширеннаяПодсказка" id="287"/>
+								</Button>
+								<Button name="УравнениеКорень" id="146">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеКорень</CommandName>
+									<Font faceName="Arial" height="9" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute"/>
+									<ExtendedTooltip name="УравнениеКореньРасширеннаяПодсказка" id="288"/>
+								</Button>
+								<Button name="УравнениеExp" id="145">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеExp</CommandName>
+									<ExtendedTooltip name="УравнениеExpРасширеннаяПодсказка" id="289"/>
+								</Button>
+								<Button name="УравнениеLog" id="139">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеLog</CommandName>
+									<ExtendedTooltip name="УравнениеLogРасширеннаяПодсказка" id="290"/>
+								</Button>
+								<Button name="УравнениеLog10" id="141">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеLog10</CommandName>
+									<ExtendedTooltip name="УравнениеLog10РасширеннаяПодсказка" id="291"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУравнениеКнопкиТригонометрия" id="142">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУравнениеКнопкиТригонометрияРасширеннаяПодсказка" id="292"/>
+							<ChildItems>
+								<Button name="УравнениеЧислоPi" id="151">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеЧислоPi</CommandName>
+									<ExtendedTooltip name="УравнениеЧислоPiРасширеннаяПодсказка" id="293"/>
+								</Button>
+								<Button name="УравнениеSin" id="135">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеSin</CommandName>
+									<ExtendedTooltip name="УравнениеSinРасширеннаяПодсказка" id="294"/>
+								</Button>
+								<Button name="УравнениеCos" id="136">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеCos</CommandName>
+									<ExtendedTooltip name="УравнениеCosРасширеннаяПодсказка" id="295"/>
+								</Button>
+								<Button name="УравнениеTan" id="140">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеTan</CommandName>
+									<ExtendedTooltip name="УравнениеTanРасширеннаяПодсказка" id="296"/>
+								</Button>
+								<Button name="УравнениеASin" id="143">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеASin</CommandName>
+									<ExtendedTooltip name="УравнениеASinРасширеннаяПодсказка" id="297"/>
+								</Button>
+								<Button name="УравнениеACos" id="144">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеACos</CommandName>
+									<ExtendedTooltip name="УравнениеACosРасширеннаяПодсказка" id="298"/>
+								</Button>
+								<Button name="УравнениеATan" id="149">
+									<Type>UsualButton</Type>
+									<Width>5</Width>
+									<CommandName>Form.Command.УравнениеATan</CommandName>
+									<ExtendedTooltip name="УравнениеATanРасширеннаяПодсказка" id="299"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУравнения" id="134">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУравненияРасширеннаяПодсказка" id="300"/>
+							<ChildItems>
+								<FormattedDocumentField name="СтрокаУравнения" id="132">
+									<DataPath>СтрокаУравнения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка уравнения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Equation string</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CommandSet>
+										<ExcludedCommand>IncreaseFontSize</ExcludedCommand>
+										<ExcludedCommand>BackColor</ExcludedCommand>
+										<ExcludedCommand>NumberedList</ExcludedCommand>
+										<ExcludedCommand>DecreaseIndent</ExcludedCommand>
+										<ExcludedCommand>LineSpacing</ExcludedCommand>
+										<ExcludedCommand>Preview</ExcludedCommand>
+										<ExcludedCommand>AlignJustify</ExcludedCommand>
+										<ExcludedCommand>SaveAs</ExcludedCommand>
+										<ExcludedCommand>Hyperlink</ExcludedCommand>
+										<ExcludedCommand>TextColor</ExcludedCommand>
+										<ExcludedCommand>Underline</ExcludedCommand>
+										<ExcludedCommand>Char</ExcludedCommand>
+										<ExcludedCommand>AlignLeft</ExcludedCommand>
+										<ExcludedCommand>Picture</ExcludedCommand>
+										<ExcludedCommand>BulletedList</ExcludedCommand>
+										<ExcludedCommand>Print</ExcludedCommand>
+										<ExcludedCommand>Italic</ExcludedCommand>
+										<ExcludedCommand>Font</ExcludedCommand>
+										<ExcludedCommand>AlignCenter</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>IncreaseIndent</ExcludedCommand>
+										<ExcludedCommand>Strikeout</ExcludedCommand>
+										<ExcludedCommand>AlignRight</ExcludedCommand>
+										<ExcludedCommand>DecreaseFontSize</ExcludedCommand>
+										<ExcludedCommand>Bold</ExcludedCommand>
+									</CommandSet>
+									<Width>37</Width>
+									<Height>2</Height>
+									<ContextMenu name="СтрокаУравненияКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="СтрокаУравненияРасширеннаяПодсказка" id="301"/>
+									<Events>
+										<Event name="OnChange">СтрокаУравненияПриИзменении</Event>
+									</Events>
+								</FormattedDocumentField>
+								<Button name="СтрокаУравненияУравнениеРасчитатьВыделенное" id="180">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УравнениеРасчитатьВыделенное</CommandName>
+									<ExtendedTooltip name="СтрокаУравненияУравнениеРасчитатьВыделенноеРасширеннаяПодсказка" id="302"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Общак" id="156">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общак</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Participation calculation</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчет участия (равномерное распределение долей)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Participation calculation</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбщакРасширеннаяПодсказка" id="303"/>
+					<ChildItems>
+						<Table name="ТаблицаУчастников" id="157">
+							<Representation>List</Representation>
+							<Width>36</Width>
+							<Footer>true</Footer>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТаблицаУчастников</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаУчастниковКонтекстноеМеню" id="158"/>
+							<AutoCommandBar name="ТаблицаУчастниковКоманднаяПанель" id="159"/>
+							<ExtendedTooltip name="ТаблицаУчастниковРасширеннаяПодсказка" id="304"/>
+							<SearchStringAddition name="ТаблицаУчастниковСтрокаПоиска" id="305">
+								<AdditionSource>
+									<Item>ТаблицаУчастников</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаУчастниковСтрокаПоискаКонтекстноеМеню" id="306"/>
+								<ExtendedTooltip name="ТаблицаУчастниковСтрокаПоискаРасширеннаяПодсказка" id="307"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаУчастниковСостояниеПросмотра" id="308">
+								<AdditionSource>
+									<Item>ТаблицаУчастников</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаУчастниковСостояниеПросмотраКонтекстноеМеню" id="309"/>
+								<ExtendedTooltip name="ТаблицаУчастниковСостояниеПросмотраРасширеннаяПодсказка" id="310"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаУчастниковУправлениеПоиском" id="311">
+								<AdditionSource>
+									<Item>ТаблицаУчастников</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаУчастниковУправлениеПоискомКонтекстноеМеню" id="312"/>
+								<ExtendedTooltip name="ТаблицаУчастниковУправлениеПоискомРасширеннаяПодсказка" id="313"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeEditEnd">ТаблицаУчастниковПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">ТаблицаУчастниковПриАктивизацииСтроки</Event>
+								<Event name="OnStartEdit">УчастникиПриНачалеРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="УчастникиНомерСтроки" id="160">
+									<DataPath>Объект.ТаблицаУчастников.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>2</Width>
+									<ContextMenu name="УчастникиНомерСтрокиКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="УчастникиНомерСтрокиРасширеннаяПодсказка" id="314"/>
+								</LabelField>
+								<InputField name="УчастникиУчастник" id="162">
+									<DataPath>Объект.ТаблицаУчастников.Участник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<ContextMenu name="УчастникиУчастникКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="УчастникиУчастникРасширеннаяПодсказка" id="315"/>
+								</InputField>
+								<InputField name="УчастникиПотратил" id="164">
+									<DataPath>Объект.ТаблицаУчастников.Потратил</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ТаблицаУчастников.TotalПотратил</FooterDataPath>
+									<Width>7</Width>
+									<ContextMenu name="УчастникиПотратилКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="УчастникиПотратилРасширеннаяПодсказка" id="316"/>
+								</InputField>
+								<InputField name="УчастникиКУчастия" id="166">
+									<DataPath>Объект.ТаблицаУчастников.КУчастия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ТаблицаУчастников.TotalКУчастия</FooterDataPath>
+									<Width>3</Width>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="УчастникиКУчастияКонтекстноеМеню" id="167"/>
+									<ExtendedTooltip name="УчастникиКУчастияРасширеннаяПодсказка" id="317"/>
+								</InputField>
+								<InputField name="УчастникиБаланс" id="168">
+									<DataPath>Объект.ТаблицаУчастников.Баланс</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<Width>7</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<ContextMenu name="УчастникиБалансКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="УчастникиБалансРасширеннаяПодсказка" id="318"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТаблицаРаспределения" id="170">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<ReadOnly>true</ReadOnly>
+							<Width>36</Width>
+							<Height>5</Height>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТаблицаРаспределенияСФильтром</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Распределение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Distribution</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаРаспределенияКонтекстноеМеню" id="171"/>
+							<AutoCommandBar name="ТаблицаРаспределенияКоманднаяПанель" id="172">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаРаспределенияРасширеннаяПодсказка" id="319"/>
+							<SearchStringAddition name="ТаблицаРаспределенияСтрокаПоиска" id="320">
+								<AdditionSource>
+									<Item>ТаблицаРаспределения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРаспределенияСтрокаПоискаКонтекстноеМеню" id="321"/>
+								<ExtendedTooltip name="ТаблицаРаспределенияСтрокаПоискаРасширеннаяПодсказка" id="322"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаРаспределенияСостояниеПросмотра" id="323">
+								<AdditionSource>
+									<Item>ТаблицаРаспределения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРаспределенияСостояниеПросмотраКонтекстноеМеню" id="324"/>
+								<ExtendedTooltip name="ТаблицаРаспределенияСостояниеПросмотраРасширеннаяПодсказка" id="325"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаРаспределенияУправлениеПоиском" id="326">
+								<AdditionSource>
+									<Item>ТаблицаРаспределения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРаспределенияУправлениеПоискомКонтекстноеМеню" id="327"/>
+								<ExtendedTooltip name="ТаблицаРаспределенияУправлениеПоискомРасширеннаяПодсказка" id="328"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаРаспределенияКто" id="177">
+									<DataPath>ТаблицаРаспределенияСФильтром.Кто</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРаспределенияКтоКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="ТаблицаРаспределенияКтоРасширеннаяПодсказка" id="329"/>
+								</InputField>
+								<InputField name="ТаблицаРаспределенияКому" id="173">
+									<DataPath>ТаблицаРаспределенияСФильтром.Кому</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРаспределенияКомуКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="ТаблицаРаспределенияКомуРасширеннаяПодсказка" id="330"/>
+								</InputField>
+								<InputField name="ТаблицаРаспределенияСумма" id="175">
+									<DataPath>ТаблицаРаспределенияСФильтром.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРаспределенияСуммаКонтекстноеМеню" id="176"/>
+									<ExtendedTooltip name="ТаблицаРаспределенияСуммаРасширеннаяПодсказка" id="331"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ФинансовыйКалькулятор144801</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.СуммаНачальная</Field>
+				<Field>Объект.СуммаКонечная</Field>
+				<Field>Объект.Ставка</Field>
+				<Field>Объект.СрокЛет</Field>
+				<Field>Объект.НачислятьПомесячно</Field>
+				<Field>Объект.МетодРасчета</Field>
+				<Field>Объект.Вычислять</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="МножительДисконтирования" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коэф. наращения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Growth factor</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>9</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычСрока" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выч срока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычСтавки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выч ставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычНачальной" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выч начальной</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычКонечной" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выч конечной</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодическиеПлатежи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодические платежи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Periodic payment</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="История" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсторияДействий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История действий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Action history</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Действие" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действие</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Action</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>2</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Sum</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Очистить" id="3">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Обрезание" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Обрезание</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОкноВвода" id="7">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Округление" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Округление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Округление</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Память" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Память</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Результат" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Result</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОкноВводаПродолжить" id="15">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекСтраница" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая страница</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Current page</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ТекСтраница</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Память1" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Память1</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтрокаУравнения" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уравнение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Equation</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<Save>
+				<Field>СтрокаУравнения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТаблицаРаспределения" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Кто" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кто</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Who</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Кому" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кому</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Whom</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Sum</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаРаспределенияСФильтром" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Он платит</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>To pay to</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Кому" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кому</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Whom</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Sum</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Кто" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кто</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Who</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Пересчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Пересчет</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="AllClear" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>AC</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>AC</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить все (с памятью)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All clear (with memory)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AllClear</Action>
+		</Command>
+		<Command name="Clear" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>C</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>C</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить (кроме памяти)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear (excl. memory)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ClearНажатие</Action>
+		</Command>
+		<Command name="MВывести" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MR</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>MR</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Память вывести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory recall</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+V</Shortcut>
+			<Action>MВывести</Action>
+		</Command>
+		<Command name="MМинус" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M-</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M-</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отнять из Памяти</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory subtract</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+X</Shortcut>
+			<Action>MМинус</Action>
+		</Command>
+		<Command name="MОчистить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MC</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>MC</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить Память</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory clear</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Z</Shortcut>
+			<Action>MОчистить</Action>
+		</Command>
+		<Command name="MПлюс" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M+</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M+</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибавить в Память</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory add</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+C</Shortcut>
+			<Action>MПлюс</Action>
+		</Command>
+		<Command name="ДействиеMarkUp" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MU</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>MU</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавление процента прибыли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark up</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДействиеMarkUp</Action>
+		</Command>
+		<Command name="ДействиеВычитание" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>-</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>-</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычитание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Subtraction</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Num -</Shortcut>
+			<Action>ДействиеВычитание</Action>
+		</Command>
+		<Command name="ДействиеДеление" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>/</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>/</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Деление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dvision</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Num /</Shortcut>
+			<Action>ДействиеДеление</Action>
+		</Command>
+		<Command name="ДействиеКорень" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>√</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>√</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корень</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Root</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Num *</Shortcut>
+			<Action>ДействиеКорень</Action>
+		</Command>
+		<Command name="ДействиеПроцент" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>%</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>%</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Percentage</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Num /</Shortcut>
+			<Action>ДействиеПроцент</Action>
+		</Command>
+		<Command name="ДействиеРавно" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>=</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>=</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Равно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Makes</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДействиеРавно</Action>
+		</Command>
+		<Command name="ДействиеСложение" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>+</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>+</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сложение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Addition</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Num +</Shortcut>
+			<Action>ДействиеСложение</Action>
+		</Command>
+		<Command name="ДействиеУмножение" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>x</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>x</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Умножение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Multiplication</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Num *</Shortcut>
+			<Action>ДействиеУмножение</Action>
+		</Command>
+		<Command name="Кнопка0" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>0</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>0</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 0</Shortcut>
+			<Action>Кнопка0</Action>
+		</Command>
+		<Command name="Кнопка000" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>000</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>000</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Ctrl+Num 0</Shortcut>
+			<Action>Кнопка000</Action>
+		</Command>
+		<Command name="Кнопка1" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>1</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 1</Shortcut>
+			<Action>Кнопка1</Action>
+		</Command>
+		<Command name="Кнопка2" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>2</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 2</Shortcut>
+			<Action>Кнопка2</Action>
+		</Command>
+		<Command name="Кнопка3" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>3</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 3</Shortcut>
+			<Action>Кнопка3</Action>
+		</Command>
+		<Command name="Кнопка4" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>4</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>4</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 4</Shortcut>
+			<Action>Кнопка4</Action>
+		</Command>
+		<Command name="Кнопка5" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>5</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>5</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 5</Shortcut>
+			<Action>Кнопка5</Action>
+		</Command>
+		<Command name="Кнопка6" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>6</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>6</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 6</Shortcut>
+			<Action>Кнопка6</Action>
+		</Command>
+		<Command name="Кнопка7" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>7</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>7</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 7</Shortcut>
+			<Action>Кнопка7</Action>
+		</Command>
+		<Command name="Кнопка8" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>8</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>8</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 8</Shortcut>
+			<Action>Кнопка8</Action>
+		</Command>
+		<Command name="Кнопка9" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>9</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>9</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Num 9</Shortcut>
+			<Action>Кнопка9</Action>
+		</Command>
+		<Command name="КнопкаРазделитель" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>.</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка разделитель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Num .</Shortcut>
+			<Action>КнопкаРазделитель</Action>
+		</Command>
+		<Command name="ПлюсМинус" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>+/-</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>+/-</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена знака</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Num -</Shortcut>
+			<Action>ПлюсМинус</Action>
+		</Command>
+		<Command name="Стереть" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стереть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стереть символ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>BackSpace</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Стереть</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="MВывести1" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M2R</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M2R</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Память2 вывести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory2 recall</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Shift+V</Shortcut>
+			<Action>MВывести1</Action>
+		</Command>
+		<Command name="MМинус1" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M2-</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M2-</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отнять из Памяти2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory2 subtract</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Shift+X</Shortcut>
+			<Action>MМинус1</Action>
+		</Command>
+		<Command name="MОчистить1" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M2C</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M2C</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить Память2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory 2 clear</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Shift+Z</Shortcut>
+			<Action>MОчистить1</Action>
+		</Command>
+		<Command name="MПлюс1" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>M2+</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>M2+</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибавить в Память2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Memory2 add</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Shift+C</Shortcut>
+			<Action>MПлюс1</Action>
+		</Command>
+		<Command name="УравнениеSin" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Sin</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sin</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисления синуса 'Sin(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sinus calculation 'Sin(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеSin</Action>
+		</Command>
+		<Command name="УравнениеCos" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Cos</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cos</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисления косинуса 'Cos(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cosinus calculation 'Cos(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеCos</Action>
+		</Command>
+		<Command name="УравнениеСкобки" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(..)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>(..)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести скобки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Insert brackets</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеСкобки</Action>
+		</Command>
+		<Command name="УравнениеLog" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>log</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>log</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисление логарифма 'Log(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Logarithm calculation 'Log(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеLog</Action>
+		</Command>
+		<Command name="УравнениеTan" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Tan</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tan</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисление тангенса 'Tan(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tangens calculation 'Tan(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеTan</Action>
+		</Command>
+		<Command name="УравнениеLog10" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>lg</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>lg</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисление десятичного логарифма 'Log10(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Decimal logarithm calculation 'Log10(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеLog10</Action>
+		</Command>
+		<Command name="УравнениеASin" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ASin</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ASin</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисления арксинуса 'ASin(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Arcsinus calculation 'ASin(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеASin</Action>
+		</Command>
+		<Command name="УравнениеACos" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ACos</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ACos</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисления арккосинуса 'ACos(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Arccosinus calculation 'ACos(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеACos</Action>
+		</Command>
+		<Command name="УравнениеATan" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ATan</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ATan</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисления арктангенса 'ATan(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Arctangens calculation 'ATan(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеATan</Action>
+		</Command>
+		<Command name="УравнениеExp" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Exp</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Exp</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисление экспаненты 'Exp(&lt;число&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Exponent calculation 'Exp(&lt;number&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеExp</Action>
+		</Command>
+		<Command name="УравнениеКорень" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ª√х</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ª√х</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисление корня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Root calculation</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеКорень</Action>
+		</Command>
+		<Command name="УравнениеСтепень" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>хª</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>хª</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычисление степени</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Rate calculation</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеСтепень</Action>
+		</Command>
+		<Command name="УравнениеОкр" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окр</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Rnd</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Округление 'Окр(&lt;число&gt;, &lt;точность&gt;)'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Rounding 'Round(&lt;number&gt;, &lt;capacity&gt;)'</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеОкр</Action>
+		</Command>
+		<Command name="УравнениеЧислоPi" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Pi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pi</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод числа Пи (Pi)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Insert Pi</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеЧислоPi</Action>
+		</Command>
+		<Command name="УравнениеРасчитать" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УравнениеРасчитать</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УравнениеРасчитатьВыделенное" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать выделенное</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate highlighted</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать выделенное</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate highlighted</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УравнениеРасчитатьВыделенное</Action>
+		</Command>
+	</Commands>
+</Form>

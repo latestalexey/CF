@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="b5532016-9a99-4d27-a495-2fd831f80569">
+		<Properties>
+			<Name>Трейдинг</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трейдинг</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">a35049ed-c40c-4abd-94ed-27c29ba7c903</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">af199225-ff99-431d-819f-4ab8317b5591</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">1c4f8218-1e8e-4491-9e44-e76e829fc198</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">f23d4099-7fb7-4ba0-ba6b-ef6f91ddf65e</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">59a8b844-6345-4cb3-ae85-088af34856a5</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">16c99a6b-f292-45ec-926d-86d194e27ba9</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">5190fdde-41bf-4ee0-aea6-e03caa489f4e</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">7f38d7ff-290e-4d56-9b20-d5d3ec05fefb</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">94f6c4fc-d329-4f83-be07-9f71f0772279</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6e55e0f5-995d-4bde-aeb3-1bce59bcf59a</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">1ecaf826-fa75-412b-ac60-518e30675e2b</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ba6db839-f095-45f9-b850-d113d76cd110</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6de2eebb-9d9c-47db-a6de-b05b550a4af7</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">0c1b5efc-bf86-40d0-8993-a984f2976c14</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">2afd251f-8af4-44e7-bf6d-d90b3c7e33e0</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ТрейдингДокументы</Subsystem>
+			<Subsystem>ТрейдингСправочники</Subsystem>
+			<Subsystem>ТрейдингРегистры</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>
