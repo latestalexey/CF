@@ -322,6 +322,7 @@
 			<InformationRegister>ФСФРБазовыйВопросы</InformationRegister>
 			<InformationRegister>ФСФРБазовыйПравильныеОтветы</InformationRegister>
 			<InformationRegister>ФСФРБазовыйОтветы</InformationRegister>
+			<InformationRegister>ФСФРБазовыйГлавы</InformationRegister>
 			<AccumulationRegister>БДР</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредства</AccumulationRegister>
 		</ChildObjects>

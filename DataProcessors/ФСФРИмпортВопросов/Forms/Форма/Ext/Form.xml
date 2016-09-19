@@ -25,6 +25,12 @@
 		<Button name="СоздатьFB2" id="9">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.СоздатьFB2</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать FB2 ("d:\fsfr\fb2\ФСФРБазовый.fb2")</v8:content>
+				</v8:item>
+			</Title>
 			<ExtendedTooltip name="СоздатьFB2РасширеннаяПодсказка" id="10"/>
 		</Button>
 	</ChildItems>
