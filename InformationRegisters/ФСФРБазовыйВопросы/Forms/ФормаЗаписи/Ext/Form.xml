@@ -16,6 +16,21 @@
 			<ContextMenu name="ВопросКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ВопросРасширеннаяПодсказка" id="6"/>
 		</InputField>
+		<InputField name="Глава" id="7">
+			<DataPath>Запись.Глава</DataPath>
+			<ContextMenu name="ГлаваКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ГлаваРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="НомерВопроса" id="10">
+			<DataPath>Запись.НомерВопроса</DataPath>
+			<ContextMenu name="НомерВопросаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="НомерВопросаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Цена" id="13">
+			<DataPath>Запись.Цена</DataPath>
+			<ContextMenu name="ЦенаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ЦенаРасширеннаяПодсказка" id="15"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Запись" id="1">
