@@ -124,6 +124,7 @@
 			<Subsystem>РаботаСПочтовымиСообщениями</Subsystem>
 			<Subsystem>Сервис</Subsystem>
 			<Subsystem>Трейдинг</Subsystem>
+			<Subsystem>ФСФР</Subsystem>
 			<StyleItem>Шрифт09</StyleItem>
 			<StyleItem>Шрифт10</StyleItem>
 			<CommonPicture>ИконкаБюджет48х48</CommonPicture>
@@ -303,6 +304,7 @@
 			<DataProcessor>УниверсальныеПодборИОбработкаОбъектов</DataProcessor>
 			<DataProcessor>ПроведениеВалютыПоПартиям</DataProcessor>
 			<DataProcessor>ЗаполнениеМесяцаПоШаблону</DataProcessor>
+			<DataProcessor>ФСФРИмпортВопросов</DataProcessor>
 			<InformationRegister>ИсключаемыеСтатьи</InformationRegister>
 			<InformationRegister>КурсыВалют</InformationRegister>
 			<InformationRegister>НастройкиДереваБюджета</InformationRegister>
@@ -317,6 +319,9 @@
 			<InformationRegister>ВерсииПодсистем</InformationRegister>
 			<InformationRegister>ПериодыДляПериодичныхСтатей</InformationRegister>
 			<InformationRegister>ПостоянныеРасходы</InformationRegister>
+			<InformationRegister>ФСФРБазовыйВопросы</InformationRegister>
+			<InformationRegister>ФСФРБазовыйПравильныеОтветы</InformationRegister>
+			<InformationRegister>ФСФРБазовыйОтветы</InformationRegister>
 			<AccumulationRegister>БДР</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредства</AccumulationRegister>
 		</ChildObjects>
