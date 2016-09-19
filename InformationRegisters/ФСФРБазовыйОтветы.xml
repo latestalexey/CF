@@ -178,7 +178,7 @@ B. только II</v8:content>
 							<v8:content>Вариант ответа</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment/>
+					<Comment>текст ответа</Comment>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
