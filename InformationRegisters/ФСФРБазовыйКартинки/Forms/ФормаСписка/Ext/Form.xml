@@ -67,7 +67,7 @@
 					<ExtendedTooltip name="ГлаваРасширеннаяПодсказка" id="19"/>
 				</LabelField>
 				<LabelField name="Цена" id="26">
-					<DataPath>Список.Цена</DataPath>
+					<DataPath>1/5</DataPath>
 					<ContextMenu name="ЦенаКонтекстноеМеню" id="27"/>
 					<ExtendedTooltip name="ЦенаРасширеннаяПодсказка" id="28"/>
 				</LabelField>
@@ -78,13 +78,13 @@
 					<ExtendedTooltip name="НомерВопросаРасширеннаяПодсказка" id="22"/>
 				</LabelField>
 				<LabelField name="Вопрос" id="23">
-					<DataPath>Список.Вопрос</DataPath>
+					<DataPath>1/1</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="ВопросКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ВопросРасширеннаяПодсказка" id="25"/>
 				</LabelField>
 				<LabelField name="ИмяКартинки" id="29">
-					<DataPath>1/6</DataPath>
+					<DataPath>Список.ИмяКартинки</DataPath>
 					<ContextMenu name="ИмяКартинкиКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ИмяКартинкиРасширеннаяПодсказка" id="31"/>
 				</LabelField>
@@ -100,7 +100,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>InformationRegister.ФСФРБазовыйВопросы</MainTable>
+				<MainTable>InformationRegister.ФСФРБазовыйКартинки</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

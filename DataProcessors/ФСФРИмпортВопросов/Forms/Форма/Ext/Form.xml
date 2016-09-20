@@ -3,61 +3,98 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
-		<InputField name="ПутьКФайлуExcel" id="1">
-			<DataPath>ИмяФайла</DataPath>
-			<ChoiceButton>true</ChoiceButton>
-			<ContextMenu name="ПутьКФайлуExcelКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ПутьКФайлуExcelРасширеннаяПодсказка" id="3"/>
-			<Events>
-				<Event name="StartChoice">ПутьКФайлуExcelНачалоВыбора</Event>
-			</Events>
-		</InputField>
-		<InputField name="ИмяЛиста" id="6">
-			<DataPath>ИмяЛиста</DataPath>
-			<ContextMenu name="ИмяЛистаКонтекстноеМеню" id="7"/>
-			<ExtendedTooltip name="ИмяЛистаРасширеннаяПодсказка" id="8"/>
-		</InputField>
-		<Button name="Загрузить" id="4">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.Загрузить</CommandName>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить вопросы</v8:content>
-				</v8:item>
-			</Title>
-			<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="5"/>
-		</Button>
-		<Button name="ЗагрузитьПравильныеОтветы" id="11">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ЗагрузитьПравильныеОтветы</CommandName>
-			<ExtendedTooltip name="ЗагрузитьПравильныеОтветыРасширеннаяПодсказка" id="12"/>
-		</Button>
-		<UsualGroup name="Группа1" id="16">
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+		<Pages name="Группа2" id="18">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="19"/>
 			<ChildItems>
-				<Button name="СоздатьFB2" id="9">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.СоздатьFB2</CommandName>
+				<Page name="Группа3" id="20">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Создать FB2 ("d:\fsfr\fb2\ФСФРБазовый.fb2")</v8:content>
+							<v8:content>Главное</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="СоздатьFB2РасширеннаяПодсказка" id="10"/>
-				</Button>
-				<CheckBoxField name="СПравильнымиОтветами" id="13">
-					<DataPath>СПравильнымиОтветами</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СПравильнымиОтветамиКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="СПравильнымиОтветамиРасширеннаяПодсказка" id="15"/>
-				</CheckBoxField>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<InputField name="ПутьКФайлуExcel" id="1">
+							<DataPath>ИмяФайла</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ПутьКФайлуExcelКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПутьКФайлуExcelРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="StartChoice">ПутьКФайлуExcelНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ИмяЛиста" id="6">
+							<DataPath>ИмяЛиста</DataPath>
+							<ContextMenu name="ИмяЛистаКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ИмяЛистаРасширеннаяПодсказка" id="8"/>
+						</InputField>
+						<Button name="Загрузить" id="4">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Загрузить</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузить вопросы</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="5"/>
+						</Button>
+						<Button name="ЗагрузитьПравильныеОтветы" id="11">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗагрузитьПравильныеОтветы</CommandName>
+							<ExtendedTooltip name="ЗагрузитьПравильныеОтветыРасширеннаяПодсказка" id="12"/>
+						</Button>
+						<UsualGroup name="Группа1" id="16">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+							<ChildItems>
+								<Button name="СоздатьFB2" id="9">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СоздатьFB2</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создать FB2 ("d:\fsfr\fb2\ФСФРБазовый.fb2")</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СоздатьFB2РасширеннаяПодсказка" id="10"/>
+								</Button>
+								<CheckBoxField name="СПравильнымиОтветами" id="13">
+									<DataPath>СПравильнымиОтветами</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СПравильнымиОтветамиКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="СПравильнымиОтветамиРасширеннаяПодсказка" id="15"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа4" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка картинок</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<InputField name="Base64картинка" id="24">
+							<DataPath>Base64картинка</DataPath>
+							<ContextMenu name="Base64картинкаКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="Base64картинкаРасширеннаяПодсказка" id="26"/>
+						</InputField>
+						<Button name="ДобавитьКартинку" id="27">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ДобавитьКартинку</CommandName>
+							<ExtendedTooltip name="ДобавитьКартинкуРасширеннаяПодсказка" id="28"/>
+						</Button>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</UsualGroup>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -116,6 +153,21 @@
 				<Field>СПравильнымиОтветами</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="Base64картинка" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Base64картинка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Загрузить" id="1">
@@ -162,6 +214,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьFB2</Action>
+		</Command>
+		<Command name="ДобавитьКартинку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить картинку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить картинку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьКартинку</Action>
 		</Command>
 	</Commands>
 </Form>
