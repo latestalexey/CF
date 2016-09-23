@@ -137,6 +137,9 @@
 			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="КошелекИсточникКонтекстноеМеню" id="6"/>
 			<ExtendedTooltip name="КошелекИсточникРасширеннаяПодсказка" id="97"/>
+			<Events>
+				<Event name="OnChange">КошелекИсточникПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="КошелекПриемник" id="27">
 			<DataPath>Объект.КошелекПриемник</DataPath>
